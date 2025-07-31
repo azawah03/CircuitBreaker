@@ -5,10 +5,16 @@ public class ThirdPersonCamera : MonoBehaviour
     public Transform target;
     public Vector3 offset = new Vector3(0f, 2.5f, -5f);
     public float sensitivity = 3f;
-    public float pitchMin = 0f;     // Prevent looking down below horizon
+    public float pitchMin = 0f;     
     public float pitchMax = 60f;
     public float collisionBuffer = 0.3f;
-    public LayerMask collisionLayers; // Set to "Default" or your ground layer
+    public LayerMask collisionLayers;
+
+    public Camera mainCamera;
+    public float normalFOV = 60f;
+    public float zoomFOV = 40f;
+    public float zoomSpeed = 8f;
+
 
     private float yaw = 0f;
     private float pitch = 10f;
@@ -54,5 +60,14 @@ public class ThirdPersonCamera : MonoBehaviour
 
         transform.rotation = rotation;
         cam.LookAt(target.position + Vector3.up * 1.5f);
+
+        if (Input.GetMouseButton(1)) // Holding right-click
+        {
+            mainCamera.fieldOfView = Mathf.Lerp(mainCamera.fieldOfView, zoomFOV, Time.deltaTime * zoomSpeed);
+        }
+        else
+        {
+            mainCamera.fieldOfView = Mathf.Lerp(mainCamera.fieldOfView, normalFOV, Time.deltaTime * zoomSpeed);
+        }
     }
 }
