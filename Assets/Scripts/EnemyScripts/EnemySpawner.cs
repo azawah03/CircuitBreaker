@@ -1,10 +1,15 @@
-﻿using UnityEngine;
+﻿using System.Diagnostics;
+using UnityEngine;
 
 public class EnemySpawner : MonoBehaviour
 {
-    public GameObject enemyPrefab;
+
+    public EnemyType[] enemyTypes;
+    public Transform[] spawnPoints;
     public Transform player;
     public float spawnInterval = 30f;
+    public float spawnY = 0f; 
+
     private float timer;
 
     void Update()
@@ -12,16 +17,46 @@ public class EnemySpawner : MonoBehaviour
         timer += Time.deltaTime;
         if (timer >= spawnInterval)
         {
-            SpawnEnemy();
+            SpawnRandomEnemy();
             timer = 0f;
         }
     }
 
-    void SpawnEnemy()
+    void SpawnRandomEnemy()
     {
-        Vector3 spawnPos = transform.position;
-        GameObject enemy = Instantiate(enemyPrefab, spawnPos, Quaternion.identity);
-        enemy.GetComponent<EnemyAI>().target = player;
-    }
+        if (enemyTypes == null || enemyTypes.Length == 0 || spawnPoints == null || spawnPoints.Length == 0)
+        {
+            return;
+        }
 
+        EnemyType type = enemyTypes[UnityEngine.Random.Range(0, enemyTypes.Length)];
+        Transform spawnPoint = spawnPoints[UnityEngine.Random.Range(0, spawnPoints.Length)];
+
+        // Override Y position
+        Vector3 spawnPos = spawnPoint.position;
+        spawnPos.y = type.spawnY; 
+
+
+        GameObject obj = Instantiate(type.prefab, spawnPos, Quaternion.identity);
+
+        // Assign target and parameters
+        EnemyAI ai = obj.GetComponent<EnemyAI>();
+        if (ai != null)
+        {
+            ai.target = player;
+            ai.moveSpeed = type.moveSpeed;
+        }
+
+        KamikazeBot kamikaze = obj.GetComponent<KamikazeBot>();
+        if (kamikaze != null)
+        {
+            kamikaze.Setup(player, type.moveSpeed, type.damage, type.explosionEffect);
+        }
+
+        RangedBot ranged = obj.GetComponent<RangedBot>();
+        if (ranged != null)
+        {
+            ranged.target = player;
+        }
+    }
 }
