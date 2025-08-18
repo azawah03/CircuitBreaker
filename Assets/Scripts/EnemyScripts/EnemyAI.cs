@@ -10,6 +10,66 @@ public class EnemyAI : MonoBehaviour
     public float moveSpeed = 3f;
     [SerializeField] protected float rotationSpeed = 5f;
 
+    [Header("Audio")]
+    public AudioClip hitSound;
+    public AudioClip ambientSound;
+    [Range(0f, 1f)]
+    public float ambientVolume = 0.3f;
+    public float ambientSoundDelay = 2f; // Delay before starting ambient sound
+    public bool randomizePitch = true;
+    private AudioSource audioSource;
+    private AudioSource ambientAudioSource;
+
+    protected virtual void Start()
+    {
+        SetupAudio();
+    }
+
+    void SetupAudio()
+    {
+        // Setup main audio source for hit sounds
+        audioSource = GetComponent<AudioSource>();
+        if (audioSource == null)
+        {
+            audioSource = gameObject.AddComponent<AudioSource>();
+        }
+
+        // Setup second audio source for ambient sounds
+        if (ambientSound != null)
+        {
+            // Create a child GameObject for ambient sound
+            GameObject ambientSoundObj = new GameObject("AmbientSound");
+            ambientSoundObj.transform.SetParent(transform);
+            ambientSoundObj.transform.localPosition = Vector3.zero;
+
+            ambientAudioSource = ambientSoundObj.AddComponent<AudioSource>();
+            ambientAudioSource.clip = ambientSound;
+            ambientAudioSource.loop = true;
+            ambientAudioSource.volume = ambientVolume;
+            ambientAudioSource.spatialBlend = 1f; // 3D sound
+            ambientAudioSource.minDistance = 1f;
+            ambientAudioSource.maxDistance = 15f;
+            ambientAudioSource.playOnAwake = false;
+
+            // Randomize pitch for variety
+            if (randomizePitch)
+            {
+                ambientAudioSource.pitch = Random.Range(0.8f, 1.2f);
+            }
+
+            // Start playing ambient sound after delay
+            Invoke("StartAmbientSound", ambientSoundDelay + Random.Range(0f, 2f));
+        }
+    }
+
+    void StartAmbientSound()
+    {
+        if (ambientAudioSource != null && ambientSound != null)
+        {
+            ambientAudioSource.Play();
+        }
+    }
+
     protected virtual void Update()
     {
         if (target == null) return;
@@ -37,6 +97,60 @@ public class EnemyAI : MonoBehaviour
         Vector3 direction = (destination - transform.position).normalized;
         direction.y = 0f;
         transform.position += direction * moveSpeed * Time.deltaTime;
+    }
+
+    public void PlayHitSound()
+    {
+        Debug.Log("Enemy PlayHitSound called - HitSound: " + (hitSound != null));
+        
+        if (hitSound != null)
+        {
+            if (audioSource == null)
+                audioSource = GetComponent<AudioSource>();
+                
+            Debug.Log("Enemy AudioSource: " + (audioSource != null));
+            
+            if (audioSource != null)
+            {
+                // Ensure AudioSource is enabled
+                audioSource.enabled = true;
+                audioSource.PlayOneShot(hitSound);
+                Debug.Log("Playing enemy hit sound");
+            }
+        }
+    }
+
+    public void StopAmbientSound()
+    {
+        if (ambientAudioSource != null)
+        {
+            ambientAudioSource.Stop();
+        }
+    }
+
+    public void PauseAmbientSound()
+    {
+        if (ambientAudioSource != null && ambientAudioSource.isPlaying)
+        {
+            ambientAudioSource.Pause();
+        }
+    }
+
+    public void ResumeAmbientSound()
+    {
+        if (ambientAudioSource != null && !ambientAudioSource.isPlaying)
+        {
+            ambientAudioSource.UnPause();
+        }
+    }
+
+    protected virtual void OnDestroy()
+    {
+        // Stop ambient sound when enemy is destroyed
+        StopAmbientSound();
+        
+        // Cancel any pending ambient sound start
+        CancelInvoke("StartAmbientSound");
     }
 
 
