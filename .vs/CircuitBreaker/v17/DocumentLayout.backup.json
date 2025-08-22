@@ -3,68 +3,24 @@
   "WorkspaceRootPath": "C:\\Users\\LordBob\\OneDrive\\Documents\\GitHub\\CircuitBreaker\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\LordBob\\OneDrive\\Documents\\GitHub\\CircuitBreaker\\Assets\\Scripts\\PlayerScripts\\PlayerAnimationController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\PlayerScripts\\PlayerAnimationController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\LordBob\\OneDrive\\Documents\\GitHub\\CircuitBreaker\\Assets\\Scripts\\PlayerScripts\\PlayerMovement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\PlayerScripts\\PlayerMovement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\LordBob\\OneDrive\\Documents\\GitHub\\CircuitBreaker\\Assets\\Scripts\\PowerUpVisual.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\PowerUpVisual.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\LordBob\\OneDrive\\Documents\\GitHub\\CircuitBreaker\\Assets\\Scripts\\PowerUpUIManager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\PowerUpUIManager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\LordBob\\OneDrive\\Documents\\GitHub\\CircuitBreaker\\Assets\\Scripts\\Bullet.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\Bullet.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\LordBob\\OneDrive\\Documents\\GitHub\\CircuitBreaker\\Assets\\Scripts\\TestPOwerUpPickup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\TestPOwerUpPickup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\LordBob\\OneDrive\\Documents\\GitHub\\CircuitBreaker\\Assets\\Scripts\\NewBehaviourScript.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\NewBehaviourScript.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Abdullah\\CircuitBreaker\\Assets\\Scripts\\PlayerMovement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\LordBob\\OneDrive\\Documents\\GitHub\\CircuitBreaker\\Assets\\Scripts\\MainMenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\MainMenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\LordBob\\OneDrive\\Documents\\GitHub\\CircuitBreaker\\Assets\\Scripts\\PlayerScripts\\PlayerHealth.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\PlayerScripts\\PlayerHealth.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\LordBob\\OneDrive\\Documents\\GitHub\\CircuitBreaker\\Assets\\Scripts\\PlayerScripts\\PlayerAnimationController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\PlayerScripts\\PlayerAnimationController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\LordBob\\OneDrive\\Documents\\GitHub\\CircuitBreaker\\Assets\\Scripts\\PowerUpVisual.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\PowerUpVisual.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\LordBob\\OneDrive\\Documents\\GitHub\\CircuitBreaker\\Assets\\Scripts\\PlayerScripts\\PlayerUI.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\PlayerScripts\\PlayerUI.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\LordBob\\OneDrive\\Documents\\GitHub\\CircuitBreaker\\Assets\\Scripts\\PlayerScripts\\ThirdPersonCamera.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\PlayerScripts\\ThirdPersonCamera.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Abdullah\\CircuitBreaker\\Assets\\Scripts\\ThirdPersonCamera.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Abdullah\\CircuitBreaker\\Assets\\Scripts\\PlayerShooting.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Abdullah\\CircuitBreaker\\Assets\\Scripts\\EnemySpawner.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Abdullah\\CircuitBreaker\\Assets\\Scripts\\EnemyAI.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Abdullah\\CircuitBreaker\\Assets\\Scripts\\PlayerLook.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Abdullah\\CircuitBreaker\\Assets\\Scripts\\PlayerAiming.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Abdullah\\CircuitBreaker\\Assets\\Scripts\\PlayerLookRotation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -79,19 +35,31 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "PlayerAnimationController.cs",
-              "DocumentMoniker": "C:\\Users\\LordBob\\OneDrive\\Documents\\GitHub\\CircuitBreaker\\Assets\\Scripts\\PlayerScripts\\PlayerAnimationController.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\PlayerScripts\\PlayerAnimationController.cs",
-              "ToolTip": "C:\\Users\\LordBob\\OneDrive\\Documents\\GitHub\\CircuitBreaker\\Assets\\Scripts\\PlayerScripts\\PlayerAnimationController.cs",
-              "RelativeToolTip": "Assets\\Scripts\\PlayerScripts\\PlayerAnimationController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAIAAAAAAAAAA==",
+              "Title": "MainMenu.cs",
+              "DocumentMoniker": "C:\\Users\\LordBob\\OneDrive\\Documents\\GitHub\\CircuitBreaker\\Assets\\Scripts\\MainMenu.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\MainMenu.cs",
+              "ToolTip": "C:\\Users\\LordBob\\OneDrive\\Documents\\GitHub\\CircuitBreaker\\Assets\\Scripts\\MainMenu.cs",
+              "RelativeToolTip": "Assets\\Scripts\\MainMenu.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAjAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-20T13:53:27.949Z",
+              "WhenOpened": "2025-08-22T11:01:40.379Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
+              "Title": "PlayerAnimationController.cs",
+              "DocumentMoniker": "C:\\Users\\LordBob\\OneDrive\\Documents\\GitHub\\CircuitBreaker\\Assets\\Scripts\\PlayerScripts\\PlayerAnimationController.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\PlayerScripts\\PlayerAnimationController.cs",
+              "ToolTip": "C:\\Users\\LordBob\\OneDrive\\Documents\\GitHub\\CircuitBreaker\\Assets\\Scripts\\PlayerScripts\\PlayerAnimationController.cs",
+              "RelativeToolTip": "Assets\\Scripts\\PlayerScripts\\PlayerAnimationController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABwAAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-20T13:53:27.949Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "PowerUpVisual.cs",
               "DocumentMoniker": "C:\\Users\\LordBob\\OneDrive\\Documents\\GitHub\\CircuitBreaker\\Assets\\Scripts\\PowerUpVisual.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\PowerUpVisual.cs",
@@ -103,42 +71,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "TestPOwerUpPickup.cs",
-              "DocumentMoniker": "C:\\Users\\LordBob\\OneDrive\\Documents\\GitHub\\CircuitBreaker\\Assets\\Scripts\\TestPowerUpPickup.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\TestPowerUpPickup.cs",
-              "ToolTip": "C:\\Users\\LordBob\\OneDrive\\Documents\\GitHub\\CircuitBreaker\\Assets\\Scripts\\TestPowerUpPickup.cs",
-              "RelativeToolTip": "Assets\\Scripts\\TestPowerUpPickup.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-07T12:26:01.725Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "PowerUpUIManager.cs",
-              "DocumentMoniker": "C:\\Users\\LordBob\\OneDrive\\Documents\\GitHub\\CircuitBreaker\\Assets\\Scripts\\PowerUpUIManager.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\PowerUpUIManager.cs",
-              "ToolTip": "C:\\Users\\LordBob\\OneDrive\\Documents\\GitHub\\CircuitBreaker\\Assets\\Scripts\\PowerUpUIManager.cs",
-              "RelativeToolTip": "Assets\\Scripts\\PowerUpUIManager.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAAD4AAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-07T12:25:07.264Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "NewBehaviourScript.cs",
-              "DocumentMoniker": "C:\\Users\\LordBob\\OneDrive\\Documents\\GitHub\\CircuitBreaker\\Assets\\Scripts\\NewBehaviourScript.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\NewBehaviourScript.cs",
-              "ToolTip": "C:\\Users\\LordBob\\OneDrive\\Documents\\GitHub\\CircuitBreaker\\Assets\\Scripts\\NewBehaviourScript.cs",
-              "RelativeToolTip": "Assets\\Scripts\\NewBehaviourScript.cs",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-07T12:21:47.688Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 4,
               "Title": "PlayerUI.cs",
               "DocumentMoniker": "C:\\Users\\LordBob\\OneDrive\\Documents\\GitHub\\CircuitBreaker\\Assets\\Scripts\\PlayerScripts\\PlayerUI.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\PlayerScripts\\PlayerUI.cs",
@@ -150,7 +83,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 1,
               "Title": "PlayerHealth.cs",
               "DocumentMoniker": "C:\\Users\\LordBob\\OneDrive\\Documents\\GitHub\\CircuitBreaker\\Assets\\Scripts\\PlayerScripts\\PlayerHealth.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\PlayerScripts\\PlayerHealth.cs",
@@ -159,135 +92,6 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-24T16:09:01.606Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "ThirdPersonCamera.cs",
-              "DocumentMoniker": "C:\\Users\\LordBob\\OneDrive\\Documents\\GitHub\\CircuitBreaker\\Assets\\Scripts\\PlayerScripts\\ThirdPersonCamera.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\PlayerScripts\\ThirdPersonCamera.cs",
-              "ToolTip": "C:\\Users\\LordBob\\OneDrive\\Documents\\GitHub\\CircuitBreaker\\Assets\\Scripts\\PlayerScripts\\ThirdPersonCamera.cs",
-              "RelativeToolTip": "Assets\\Scripts\\PlayerScripts\\ThirdPersonCamera.cs",
-              "ViewState": "AgIAADMAAAAAAAAAAAAAAEUAAABvAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-31T16:26:48.123Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "PlayerMovement.cs",
-              "DocumentMoniker": "C:\\Users\\LordBob\\OneDrive\\Documents\\GitHub\\CircuitBreaker\\Assets\\Scripts\\PlayerScripts\\PlayerMovement.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\PlayerScripts\\PlayerMovement.cs",
-              "ToolTip": "C:\\Users\\LordBob\\OneDrive\\Documents\\GitHub\\CircuitBreaker\\Assets\\Scripts\\PlayerScripts\\PlayerMovement.cs",
-              "RelativeToolTip": "Assets\\Scripts\\PlayerScripts\\PlayerMovement.cs",
-              "ViewState": "AgIAADsAAAAAAAAAAAAAAEMAAAAGAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-31T16:22:45.68Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "EnemySpawner.cs",
-              "DocumentMoniker": "C:\\Users\\Abdullah\\CircuitBreaker\\Assets\\Scripts\\EnemySpawner.cs",
-              "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\Abdullah\\CircuitBreaker\\Assets\\Scripts\\EnemySpawner.cs",
-              "ToolTip": "C:\\Users\\Abdullah\\CircuitBreaker\\Assets\\Scripts\\EnemySpawner.cs",
-              "RelativeToolTip": "..\\..\\..\\..\\..\\Abdullah\\CircuitBreaker\\Assets\\Scripts\\EnemySpawner.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAuAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-24T16:03:03.299Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "PlayerShooting.cs",
-              "DocumentMoniker": "C:\\Users\\Abdullah\\CircuitBreaker\\Assets\\Scripts\\PlayerShooting.cs",
-              "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\Abdullah\\CircuitBreaker\\Assets\\Scripts\\PlayerShooting.cs",
-              "ToolTip": "C:\\Users\\Abdullah\\CircuitBreaker\\Assets\\Scripts\\PlayerShooting.cs",
-              "RelativeToolTip": "..\\..\\..\\..\\..\\Abdullah\\CircuitBreaker\\Assets\\Scripts\\PlayerShooting.cs",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-24T15:39:03.374Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Bullet.cs",
-              "DocumentMoniker": "C:\\Users\\LordBob\\OneDrive\\Documents\\GitHub\\CircuitBreaker\\Assets\\Scripts\\Bullet.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\Bullet.cs",
-              "ToolTip": "C:\\Users\\LordBob\\OneDrive\\Documents\\GitHub\\CircuitBreaker\\Assets\\Scripts\\Bullet.cs",
-              "RelativeToolTip": "Assets\\Scripts\\Bullet.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-24T15:37:07.739Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "PlayerMovement.cs",
-              "DocumentMoniker": "C:\\Users\\Abdullah\\CircuitBreaker\\Assets\\Scripts\\PlayerMovement.cs",
-              "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\Abdullah\\CircuitBreaker\\Assets\\Scripts\\PlayerMovement.cs",
-              "ToolTip": "C:\\Users\\Abdullah\\CircuitBreaker\\Assets\\Scripts\\PlayerMovement.cs",
-              "RelativeToolTip": "..\\..\\..\\..\\..\\Abdullah\\CircuitBreaker\\Assets\\Scripts\\PlayerMovement.cs",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-24T12:21:51.508Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "EnemyAI.cs",
-              "DocumentMoniker": "C:\\Users\\Abdullah\\CircuitBreaker\\Assets\\Scripts\\EnemyAI.cs",
-              "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\Abdullah\\CircuitBreaker\\Assets\\Scripts\\EnemyAI.cs",
-              "ToolTip": "C:\\Users\\Abdullah\\CircuitBreaker\\Assets\\Scripts\\EnemyAI.cs",
-              "RelativeToolTip": "..\\..\\..\\..\\..\\Abdullah\\CircuitBreaker\\Assets\\Scripts\\EnemyAI.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-24T15:51:58.881Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "PlayerLook.cs",
-              "DocumentMoniker": "C:\\Users\\Abdullah\\CircuitBreaker\\Assets\\Scripts\\PlayerLook.cs",
-              "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\Abdullah\\CircuitBreaker\\Assets\\Scripts\\PlayerLook.cs",
-              "ToolTip": "C:\\Users\\Abdullah\\CircuitBreaker\\Assets\\Scripts\\PlayerLook.cs",
-              "RelativeToolTip": "..\\..\\..\\..\\..\\Abdullah\\CircuitBreaker\\Assets\\Scripts\\PlayerLook.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-24T13:07:38.823Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "PlayerAiming.cs",
-              "DocumentMoniker": "C:\\Users\\Abdullah\\CircuitBreaker\\Assets\\Scripts\\PlayerAiming.cs",
-              "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\Abdullah\\CircuitBreaker\\Assets\\Scripts\\PlayerAiming.cs",
-              "ToolTip": "C:\\Users\\Abdullah\\CircuitBreaker\\Assets\\Scripts\\PlayerAiming.cs",
-              "RelativeToolTip": "..\\..\\..\\..\\..\\Abdullah\\CircuitBreaker\\Assets\\Scripts\\PlayerAiming.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-24T13:04:22.216Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "ThirdPersonCamera.cs",
-              "DocumentMoniker": "C:\\Users\\Abdullah\\CircuitBreaker\\Assets\\Scripts\\ThirdPersonCamera.cs",
-              "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\Abdullah\\CircuitBreaker\\Assets\\Scripts\\ThirdPersonCamera.cs",
-              "ToolTip": "C:\\Users\\Abdullah\\CircuitBreaker\\Assets\\Scripts\\ThirdPersonCamera.cs",
-              "RelativeToolTip": "..\\..\\..\\..\\..\\Abdullah\\CircuitBreaker\\Assets\\Scripts\\ThirdPersonCamera.cs",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-24T13:02:10.312Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "PlayerLookRotation.cs",
-              "DocumentMoniker": "C:\\Users\\Abdullah\\CircuitBreaker\\Assets\\Scripts\\PlayerLookRotation.cs",
-              "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\Abdullah\\CircuitBreaker\\Assets\\Scripts\\PlayerLookRotation.cs",
-              "ToolTip": "C:\\Users\\Abdullah\\CircuitBreaker\\Assets\\Scripts\\PlayerLookRotation.cs",
-              "RelativeToolTip": "..\\..\\..\\..\\..\\Abdullah\\CircuitBreaker\\Assets\\Scripts\\PlayerLookRotation.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAZAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-24T12:43:53.495Z"
             }
           ]
         }
