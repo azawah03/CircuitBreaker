@@ -13,8 +13,8 @@ public class EnemyAI : MonoBehaviour
     [Header("Audio")]
     public AudioClip hitSound;
     public AudioClip ambientSound;
-    [Range(0f, 1f)]
-    public float ambientVolume = 0.3f;
+    [Range(0f, 2f)] // Allow volumes above 1 for ambient sounds
+    public float ambientVolume = 0.8f; // Much higher default volume
     public float ambientSoundDelay = 2f; // Delay before starting ambient sound
     public bool randomizePitch = true;
     private AudioSource audioSource;
@@ -46,9 +46,11 @@ public class EnemyAI : MonoBehaviour
             ambientAudioSource.clip = ambientSound;
             ambientAudioSource.loop = true;
             ambientAudioSource.volume = ambientVolume;
-            ambientAudioSource.spatialBlend = 1f; // 3D sound
-            ambientAudioSource.minDistance = 1f;
-            ambientAudioSource.maxDistance = 15f;
+            ambientAudioSource.spatialBlend = 0.7f; // Less 3D, more audible
+            ambientAudioSource.minDistance = 3f; // Larger min distance
+            ambientAudioSource.maxDistance = 25f; // Larger max distance
+            ambientAudioSource.rolloffMode = AudioRolloffMode.Linear;
+            ambientAudioSource.priority = 96; // Lower priority than SFX but higher than music
             ambientAudioSource.playOnAwake = false;
 
             // Randomize pitch for variety
@@ -66,7 +68,30 @@ public class EnemyAI : MonoBehaviour
     {
         if (ambientAudioSource != null && ambientSound != null)
         {
+            // Apply AudioManager volume settings if available
+            float finalVolume = ambientVolume;
+            if (AudioManager.Instance != null)
+            {
+                finalVolume *= AudioManager.Instance.sfxVolume * AudioManager.Instance.masterVolume;
+            }
+            
+            ambientAudioSource.volume = finalVolume;
             ambientAudioSource.Play();
+            Debug.Log($"Started ambient sound for {gameObject.name} at volume: {finalVolume}");
+        }
+    }
+    
+    public void SetAmbientVolume(float newVolume)
+    {
+        ambientVolume = newVolume;
+        if (ambientAudioSource != null)
+        {
+            float finalVolume = ambientVolume;
+            if (AudioManager.Instance != null)
+            {
+                finalVolume *= AudioManager.Instance.sfxVolume * AudioManager.Instance.masterVolume;
+            }
+            ambientAudioSource.volume = finalVolume;
         }
     }
 
