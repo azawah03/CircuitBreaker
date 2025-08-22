@@ -6,9 +6,9 @@ public class AudioManager : MonoBehaviour
     [Range(0f, 1f)]
     public float masterVolume = 1f;
     [Range(0f, 1f)]
-    public float musicVolume = 0.5f;
+    public float musicVolume = 0.15f; // Even lower music volume
     [Range(0f, 1f)]
-    public float sfxVolume = 1f;
+    public float sfxVolume = 0.9f; // Higher SFX volume for ambient sounds
     
     private BackgroundMusicManager musicManager;
     
@@ -39,8 +39,8 @@ public class AudioManager : MonoBehaviour
     
     public void UpdateAudioSettings()
     {
-        // Update global audio settings
-        AudioListener.volume = masterVolume;
+        // Don't use AudioListener.volume as it affects everything globally
+        // Instead, control volumes individually
         
         // Update music volume
         if (musicManager != null)
@@ -72,7 +72,19 @@ public class AudioManager : MonoBehaviour
     {
         if (Instance != null && audioSource != null && clip != null)
         {
+            // Set SFX priority higher than background music
+            audioSource.priority = 32; // Lower number = higher priority
             audioSource.PlayOneShot(clip, Instance.sfxVolume * Instance.masterVolume);
+        }
+    }
+    
+    // Overloaded method with custom volume
+    public static void PlaySFX(AudioSource audioSource, AudioClip clip, float volumeMultiplier)
+    {
+        if (Instance != null && audioSource != null && clip != null)
+        {
+            audioSource.priority = 32;
+            audioSource.PlayOneShot(clip, Instance.sfxVolume * Instance.masterVolume * volumeMultiplier);
         }
     }
 }

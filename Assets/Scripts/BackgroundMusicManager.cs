@@ -4,8 +4,9 @@ public class BackgroundMusicManager : MonoBehaviour
 {
     [Header("Background Music")]
     public AudioClip backgroundMusic;
-    public float volume = 0.5f;
     [Range(0f, 1f)]
+    public float volume = 0.2f; // Lower default volume
+    [Range(0f, 5f)]
     public float fadeInDuration = 2f;
     
     private AudioSource audioSource;
@@ -24,6 +25,8 @@ public class BackgroundMusicManager : MonoBehaviour
         audioSource.loop = true;
         audioSource.playOnAwake = false;
         audioSource.volume = 0f; // Start at 0 for fade in effect
+        audioSource.spatialBlend = 0f; // 2D sound
+        audioSource.priority = 64; // Lower priority than SFX (higher number = lower priority)
         
         // Play background music
         if (backgroundMusic != null)
