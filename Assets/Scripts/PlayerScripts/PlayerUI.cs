@@ -7,7 +7,6 @@ public class PlayerUI : MonoBehaviour
     public Slider healthBar;
     public Slider staminaBar;
     public TextMeshProUGUI ammoText;
-
     private PlayerMovement movement;
     private PlayerHealth health;
 
@@ -19,7 +18,7 @@ public class PlayerUI : MonoBehaviour
 
     void Update()
     {
-        if (movement != null)
+        if (movement != null && staminaBar != null)
         {
             staminaBar.maxValue = movement.maxStamina;
             staminaBar.value = movement.stamina;

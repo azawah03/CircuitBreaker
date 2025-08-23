@@ -4,35 +4,34 @@
 public class PlayerMovement : MonoBehaviour
 {
     public Transform cameraTransform;
-    public float moveSpeed = 6f;
+    public float moveSpeed = 7f;
     public float gravity = -10f;
     public float rotationSpeed = 10f;
-    public float jumpHeight = 5.5f;
-
-    public float sprintSpeed = 11f;
-    public float stamina = 6f;
+    public float jumpHeight = 8f;
+    public float sprintSpeed = 12f;
+    public float stamina = 5f;
     public float maxStamina = 5f;
     public float staminaRegenRate = 2f;
     public float staminaDrainRate = 1f;
     public float staminaCooldownDuration = 2f;
-
     private float staminaCooldownTimer = 0f;
     private float currentSpeed;
     public bool IsSprinting { get; private set; }
-
     private CharacterController controller;
     private Vector3 velocity;
 
     void Start()
     {
         controller = GetComponent<CharacterController>();
+        currentSpeed = moveSpeed;
+        IsSprinting = false;
+        stamina = maxStamina;
     }
 
     void Update()
     {
         float horizontal = Input.GetAxisRaw("Horizontal");
         float vertical = Input.GetAxisRaw("Vertical");
-
         Vector3 inputDir = new Vector3(horizontal, 0f, vertical);
         inputDir = Vector3.ClampMagnitude(inputDir, 1f);
 
@@ -46,6 +45,7 @@ public class PlayerMovement : MonoBehaviour
             staminaCooldownTimer -= Time.deltaTime;
         }
 
+        // Sprint logic with stamina
         bool shiftHeld = Input.GetKey(KeyCode.LeftShift);
         bool wantsToSprint = shiftHeld && inputDir.sqrMagnitude > 0.01f;
         bool canSprint = stamina > 0f && staminaCooldownTimer <= 0f;
@@ -61,23 +61,23 @@ public class PlayerMovement : MonoBehaviour
         {
             IsSprinting = false;
             currentSpeed = moveSpeed;
-            stamina += staminaRegenRate * Time.deltaTime;
-            stamina = Mathf.Min(stamina, maxStamina);
+            if (!shiftHeld || inputDir.sqrMagnitude < 0.01f)
+            {
+                stamina += staminaRegenRate * Time.deltaTime;
+                stamina = Mathf.Min(stamina, maxStamina);
+            }
         }
 
         // Jumping
         bool isGrounded = controller.isGrounded || velocity.y < 0.1f && velocity.y > -0.1f;
-
         if (isGrounded)
         {
             velocity.y = -2f;
-
             if (Input.GetKeyDown(KeyCode.Space))
             {
                 velocity.y = jumpHeight;
             }
         }
-
         velocity.y += gravity * Time.deltaTime;
 
         // Movement
@@ -85,12 +85,10 @@ public class PlayerMovement : MonoBehaviour
         {
             Vector3 camForward = cameraTransform.forward;
             Vector3 camRight = cameraTransform.right;
-
             camForward.y = 0f;
             camRight.y = 0f;
             camForward.Normalize();
             camRight.Normalize();
-
             Vector3 moveDir = camForward * inputDir.z + camRight * inputDir.x;
             moveDir.Normalize();
 
@@ -101,13 +99,11 @@ public class PlayerMovement : MonoBehaviour
             }
             else
             {
-                
                 controller.Move(moveDir * currentSpeed * 0.3f * Time.deltaTime);
             }
 
             Quaternion targetRotation = Quaternion.LookRotation(moveDir);
             transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, Time.deltaTime * rotationSpeed);
-
             lastMoveDirection = moveDir;
         }
 
@@ -115,6 +111,4 @@ public class PlayerMovement : MonoBehaviour
     }
 
     public Vector3 lastMoveDirection { get; private set; } = Vector3.forward;
-
-    public bool IsSprinting => isSprinting;
 }
