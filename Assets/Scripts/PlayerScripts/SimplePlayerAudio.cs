@@ -7,8 +7,8 @@ public class SimplePlayerAudio : MonoBehaviour
     public AudioClip[] runFootsteps;
     [Range(0f, 1f)]
     public float footstepVolume = 0.7f;
-    public float walkStepInterval = 0.5f;
-    public float runStepInterval = 0.3f;
+    public float walkStepInterval = 0.6f;  // Slightly faster for better sync
+    public float runStepInterval = 0.35f;  // Faster for running
     
     [Header("Jump/Landing Sounds")]
     public AudioClip jumpSound;
@@ -21,67 +21,75 @@ public class SimplePlayerAudio : MonoBehaviour
     private PlayerMovement playerMovement;
     private CharacterController controller;
     private AudioSource audioSource;
-    private AudioSource[] footstepAudioSources; // Multiple audio sources for clean footsteps
-    private int currentFootstepSource = 0;
     
     private bool wasGroundedLastFrame;
     private float footstepTimer;
     private bool hasPlayedJumpSound;
+    private float lastFootstepTime; // Prevent rapid-fire footsteps
     
     void Start()
     {
         playerMovement = GetComponent<PlayerMovement>();
         controller = GetComponent<CharacterController>();
-        audioSource = GetComponent<AudioSource>();
         
+        // Get existing AudioSource or create a clean one
+        audioSource = GetComponent<AudioSource>();
         if (audioSource == null)
         {
             audioSource = gameObject.AddComponent<AudioSource>();
         }
         
-        // Create multiple AudioSources for footsteps to avoid any interference
-        footstepAudioSources = new AudioSource[3]; // Use 3 sources to prevent overlap issues
-        for (int i = 0; i < footstepAudioSources.Length; i++)
-        {
-            GameObject footstepObj = new GameObject($"FootstepAudio_{i}");
-            footstepObj.transform.SetParent(transform);
-            footstepObj.transform.localPosition = Vector3.zero;
-            footstepAudioSources[i] = footstepObj.AddComponent<AudioSource>();
-            footstepAudioSources[i].spatialBlend = 0.5f; // Semi-3D
-            footstepAudioSources[i].volume = 1f;
-            footstepAudioSources[i].pitch = 1f; // Always keep pitch at 1
-            footstepAudioSources[i].playOnAwake = false;
-        }
-
-        audioSource.spatialBlend = 0.5f; // Semi-3D
+        // Reset AudioSource to clean defaults
+        audioSource.clip = null;
         audioSource.volume = 1f;
-        audioSource.pitch = 1f; // Always keep pitch at 1
+        audioSource.pitch = 1f;
+        audioSource.spatialBlend = 0f; // 2D sound to avoid 3D audio issues
         audioSource.playOnAwake = false;
+        audioSource.loop = false;
+        audioSource.priority = 128;
+        audioSource.panStereo = 0f;
+        audioSource.reverbZoneMix = 1f;
+        audioSource.dopplerLevel = 1f;
+        audioSource.spread = 0f;
+        audioSource.rolloffMode = AudioRolloffMode.Logarithmic;
+        audioSource.minDistance = 1f;
+        audioSource.maxDistance = 500f;
 
         wasGroundedLastFrame = controller.isGrounded;
-        
-        Debug.Log($"SimplePlayerAudio Start - Components found: PlayerMovement({playerMovement != null}), CharacterController({controller != null}), AudioSource({audioSource != null}), FootstepAudioSources({footstepAudioSources.Length})");
-        Debug.Log($"Audio clips - Walk: {walkFootsteps?.Length ?? 0}, Run: {runFootsteps?.Length ?? 0}, Jump: {jumpSound != null}, Landing: {landingSound != null}");
     }
     
     void Update()
     {
+        Debug.Log("SimplePlayerAudio Update called");
         HandleFootsteps();
         HandleJumpAndLanding();
     }
     
     void HandleFootsteps()
     {
-        if (controller == null || playerMovement == null) return;
+        Debug.Log("HandleFootsteps called");
+        
+        if (controller == null || playerMovement == null) 
+        {
+            Debug.Log($"Missing components - Controller: {controller != null}, PlayerMovement: {playerMovement != null}");
+            return;
+        }
         
         bool isGrounded = controller.isGrounded;
-        bool isMoving = controller.velocity.magnitude > 0.1f;
+        
+        // Use input detection instead of velocity (more reliable for CharacterController)
+        float horizontal = Input.GetAxisRaw("Horizontal");
+        float vertical = Input.GetAxisRaw("Vertical");
+        bool isMoving = (Mathf.Abs(horizontal) > 0.1f || Mathf.Abs(vertical) > 0.1f);
+        
+        Debug.Log($"Grounded: {isGrounded}, Input H: {horizontal:F2}, V: {vertical:F2}, Moving: {isMoving}");
         
         if (isGrounded && isMoving)
         {
             footstepTimer += Time.deltaTime;
             
             float currentStepInterval = playerMovement.IsSprinting ? runStepInterval : walkStepInterval;
+            Debug.Log($"Footstep timer: {footstepTimer:F2}, Interval needed: {currentStepInterval}");
             
             if (footstepTimer >= currentStepInterval)
             {
@@ -120,30 +128,30 @@ public class SimplePlayerAudio : MonoBehaviour
     
     void PlayFootstepSound()
     {
+        // Prevent playing footsteps too rapidly (min 0.1 seconds between steps)
+        if (Time.time - lastFootstepTime < 0.1f) return;
+        
         AudioClip[] currentFootsteps = playerMovement.IsSprinting ? runFootsteps : walkFootsteps;
         
-        if (currentFootsteps != null && currentFootsteps.Length > 0 && footstepAudioSources != null)
+        if (currentFootsteps != null && currentFootsteps.Length > 0 && audioSource != null)
         {
             AudioClip randomFootstep = currentFootsteps[Random.Range(0, currentFootsteps.Length)];
             
             if (randomFootstep != null)
             {
-                // Use round-robin approach to get next available audio source
-                AudioSource currentSource = footstepAudioSources[currentFootstepSource];
-                currentFootstepSource = (currentFootstepSource + 1) % footstepAudioSources.Length;
-                
-                // Play with NO pitch modification - just clean audio
-                currentSource.clip = randomFootstep;
-                currentSource.volume = footstepVolume;
-                currentSource.pitch = 1f; // Always 1, no variation
-                currentSource.Play();
-                
-                Debug.Log($"Played clean footstep: {randomFootstep.name} on source {currentFootstepSource - 1}");
+                // Use PlayOneShot without stopping - let sounds overlap naturally
+                audioSource.PlayOneShot(randomFootstep, footstepVolume);
+                lastFootstepTime = Time.time;
+                Debug.Log($"Playing footstep: {randomFootstep.name}");
+            }
+            else
+            {
+                Debug.Log("Selected footstep clip is null!");
             }
         }
         else
         {
-            Debug.Log("No footstep clips assigned or missing footstep audio sources!");
+            Debug.Log($"No footsteps available - Array: {currentFootsteps?.Length ?? 0}, AudioSource: {audioSource != null}");
         }
     }
     
@@ -151,12 +159,7 @@ public class SimplePlayerAudio : MonoBehaviour
     {
         if (jumpSound != null && audioSource != null)
         {
-            // Play with NO pitch modification - just clean audio
-            audioSource.clip = jumpSound;
-            audioSource.volume = jumpVolume;
-            audioSource.pitch = 1f; // Always 1, no variation
-            audioSource.Play();
-            Debug.Log($"Played clean jump sound: {jumpSound.name}");
+            audioSource.PlayOneShot(jumpSound, jumpVolume);
         }
     }
     
@@ -164,12 +167,7 @@ public class SimplePlayerAudio : MonoBehaviour
     {
         if (landingSound != null && audioSource != null)
         {
-            // Play with NO pitch modification - just clean audio
-            audioSource.clip = landingSound;
-            audioSource.volume = landingVolume;
-            audioSource.pitch = 1f; // Always 1, no variation
-            audioSource.Play();
-            Debug.Log($"Played clean landing sound: {landingSound.name}");
+            audioSource.PlayOneShot(landingSound, landingVolume);
         }
     }
 }
