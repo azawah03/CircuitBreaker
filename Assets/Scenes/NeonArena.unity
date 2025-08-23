@@ -2403,7 +2403,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   backgroundMusic: {fileID: 8300000, guid: a7dbe4b2b3597bd46acd168b7d1c9a91, type: 3}
-  volume: 0.06
+  volume: 0.025
   fadeInDuration: 2
 --- !u!114 &613785764
 MonoBehaviour:
@@ -3007,7 +3007,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1763832815635720, guid: c816c50f1076b564bbe9891c3e74b00e, type: 3}
       propertyPath: m_Name
-      value: Robot_Soldier_Camo1
+      value: Robot_Soldier
       objectReference: {fileID: 0}
     - target: {fileID: 1763832815635720, guid: c816c50f1076b564bbe9891c3e74b00e, type: 3}
       propertyPath: m_TagString
@@ -3139,12 +3139,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cameraTransform: {fileID: 2109801181}
-  moveSpeed: 5
-  gravity: -0.81
+  moveSpeed: 7
+  gravity: -10
   rotationSpeed: 5
-  jumpHeight: 4
-  sprintSpeed: 15
-  stamina: 5
+  jumpHeight: 5.5
+  sprintSpeed: 12
+  stamina: 6
   maxStamina: 5
   staminaRegenRate: 2
   staminaDrainRate: 1

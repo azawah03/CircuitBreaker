@@ -5,12 +5,12 @@ public class PlayerMovement : MonoBehaviour
 {
     public Transform cameraTransform;
     public float moveSpeed = 6f;
-    public float gravity = -20f;
+    public float gravity = -10f;
     public float rotationSpeed = 10f;
-    public float jumpHeight = 8f;
+    public float jumpHeight = 5.5f;
 
-    public float sprintSpeed = 10f;
-    public float stamina = 5f;
+    public float sprintSpeed = 11f;
+    public float stamina = 6f;
     public float maxStamina = 5f;
     public float staminaRegenRate = 2f;
     public float staminaDrainRate = 1f;
@@ -18,7 +18,7 @@ public class PlayerMovement : MonoBehaviour
 
     private float staminaCooldownTimer = 0f;
     private float currentSpeed;
-    private bool isSprinting;
+    public bool IsSprinting { get; private set; }
 
     private CharacterController controller;
     private Vector3 velocity;
@@ -52,21 +52,23 @@ public class PlayerMovement : MonoBehaviour
 
         if (wantsToSprint && canSprint)
         {
-            isSprinting = true;
+            IsSprinting = true;
             currentSpeed = sprintSpeed;
             stamina -= staminaDrainRate * Time.deltaTime;
             stamina = Mathf.Max(stamina, 0f);
         }
         else
         {
-            isSprinting = false;
+            IsSprinting = false;
             currentSpeed = moveSpeed;
             stamina += staminaRegenRate * Time.deltaTime;
             stamina = Mathf.Min(stamina, maxStamina);
         }
 
         // Jumping
-        if (controller.isGrounded && velocity.y < 0)
+        bool isGrounded = controller.isGrounded || velocity.y < 0.1f && velocity.y > -0.1f;
+
+        if (isGrounded)
         {
             velocity.y = -2f;
 
@@ -92,7 +94,16 @@ public class PlayerMovement : MonoBehaviour
             Vector3 moveDir = camForward * inputDir.z + camRight * inputDir.x;
             moveDir.Normalize();
 
-            controller.Move(moveDir * currentSpeed * Time.deltaTime);
+            // Only apply movement if grounded
+            if (controller.isGrounded)
+            {
+                controller.Move(moveDir * currentSpeed * Time.deltaTime);
+            }
+            else
+            {
+                
+                controller.Move(moveDir * currentSpeed * 0.3f * Time.deltaTime);
+            }
 
             Quaternion targetRotation = Quaternion.LookRotation(moveDir);
             transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, Time.deltaTime * rotationSpeed);
