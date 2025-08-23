@@ -115,4 +115,6 @@ public class PlayerMovement : MonoBehaviour
     }
 
     public Vector3 lastMoveDirection { get; private set; } = Vector3.forward;
+
+    public bool IsSprinting => isSprinting;
 }

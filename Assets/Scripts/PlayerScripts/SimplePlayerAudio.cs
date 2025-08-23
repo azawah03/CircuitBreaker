@@ -21,6 +21,8 @@ public class SimplePlayerAudio : MonoBehaviour
     private PlayerMovement playerMovement;
     private CharacterController controller;
     private AudioSource audioSource;
+    private AudioSource[] footstepAudioSources; // Multiple audio sources for clean footsteps
+    private int currentFootstepSource = 0;
     
     private bool wasGroundedLastFrame;
     private float footstepTimer;
@@ -37,13 +39,28 @@ public class SimplePlayerAudio : MonoBehaviour
             audioSource = gameObject.AddComponent<AudioSource>();
         }
         
+        // Create multiple AudioSources for footsteps to avoid any interference
+        footstepAudioSources = new AudioSource[3]; // Use 3 sources to prevent overlap issues
+        for (int i = 0; i < footstepAudioSources.Length; i++)
+        {
+            GameObject footstepObj = new GameObject($"FootstepAudio_{i}");
+            footstepObj.transform.SetParent(transform);
+            footstepObj.transform.localPosition = Vector3.zero;
+            footstepAudioSources[i] = footstepObj.AddComponent<AudioSource>();
+            footstepAudioSources[i].spatialBlend = 0.5f; // Semi-3D
+            footstepAudioSources[i].volume = 1f;
+            footstepAudioSources[i].pitch = 1f; // Always keep pitch at 1
+            footstepAudioSources[i].playOnAwake = false;
+        }
+
         audioSource.spatialBlend = 0.5f; // Semi-3D
         audioSource.volume = 1f;
+        audioSource.pitch = 1f; // Always keep pitch at 1
         audioSource.playOnAwake = false;
-        
+
         wasGroundedLastFrame = controller.isGrounded;
         
-        Debug.Log($"SimplePlayerAudio Start - Components found: PlayerMovement({playerMovement != null}), CharacterController({controller != null}), AudioSource({audioSource != null})");
+        Debug.Log($"SimplePlayerAudio Start - Components found: PlayerMovement({playerMovement != null}), CharacterController({controller != null}), AudioSource({audioSource != null}), FootstepAudioSources({footstepAudioSources.Length})");
         Debug.Log($"Audio clips - Walk: {walkFootsteps?.Length ?? 0}, Run: {runFootsteps?.Length ?? 0}, Jump: {jumpSound != null}, Landing: {landingSound != null}");
     }
     
@@ -105,20 +122,28 @@ public class SimplePlayerAudio : MonoBehaviour
     {
         AudioClip[] currentFootsteps = playerMovement.IsSprinting ? runFootsteps : walkFootsteps;
         
-        if (currentFootsteps != null && currentFootsteps.Length > 0 && audioSource != null)
+        if (currentFootsteps != null && currentFootsteps.Length > 0 && footstepAudioSources != null)
         {
             AudioClip randomFootstep = currentFootsteps[Random.Range(0, currentFootsteps.Length)];
             
             if (randomFootstep != null)
             {
-                audioSource.pitch = Random.Range(0.9f, 1.1f);
-                audioSource.PlayOneShot(randomFootstep, footstepVolume);
-                Debug.Log($"Played footstep: {randomFootstep.name} (Volume: {footstepVolume})");
+                // Use round-robin approach to get next available audio source
+                AudioSource currentSource = footstepAudioSources[currentFootstepSource];
+                currentFootstepSource = (currentFootstepSource + 1) % footstepAudioSources.Length;
+                
+                // Play with NO pitch modification - just clean audio
+                currentSource.clip = randomFootstep;
+                currentSource.volume = footstepVolume;
+                currentSource.pitch = 1f; // Always 1, no variation
+                currentSource.Play();
+                
+                Debug.Log($"Played clean footstep: {randomFootstep.name} on source {currentFootstepSource - 1}");
             }
         }
         else
         {
-            Debug.Log("No footstep clips assigned or missing audio source!");
+            Debug.Log("No footstep clips assigned or missing footstep audio sources!");
         }
     }
     
@@ -126,9 +151,12 @@ public class SimplePlayerAudio : MonoBehaviour
     {
         if (jumpSound != null && audioSource != null)
         {
-            audioSource.pitch = Random.Range(0.95f, 1.05f);
-            audioSource.PlayOneShot(jumpSound, jumpVolume);
-            Debug.Log($"Played jump sound: {jumpSound.name}");
+            // Play with NO pitch modification - just clean audio
+            audioSource.clip = jumpSound;
+            audioSource.volume = jumpVolume;
+            audioSource.pitch = 1f; // Always 1, no variation
+            audioSource.Play();
+            Debug.Log($"Played clean jump sound: {jumpSound.name}");
         }
     }
     
@@ -136,9 +164,12 @@ public class SimplePlayerAudio : MonoBehaviour
     {
         if (landingSound != null && audioSource != null)
         {
-            audioSource.pitch = Random.Range(0.9f, 1.1f);
-            audioSource.PlayOneShot(landingSound, landingVolume);
-            Debug.Log($"Played landing sound: {landingSound.name}");
+            // Play with NO pitch modification - just clean audio
+            audioSource.clip = landingSound;
+            audioSource.volume = landingVolume;
+            audioSource.pitch = 1f; // Always 1, no variation
+            audioSource.Play();
+            Debug.Log($"Played clean landing sound: {landingSound.name}");
         }
     }
 }

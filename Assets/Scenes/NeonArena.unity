@@ -2038,7 +2038,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 547469129}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 228b8aca339a2814fbb0425512c291b4, type: 3}
   m_Name: 
@@ -2418,7 +2418,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   masterVolume: 1
-  musicVolume: 0.517
+  musicVolume: 0.016
   sfxVolume: 1
 --- !u!4 &613785765
 Transform:
@@ -3185,6 +3185,28 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 830803707}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &830803718
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 830803708}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0befe20754192234e9a96b1bce76f25a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  walkFootsteps:
+  - {fileID: 8300000, guid: 0b2af03a6a15cd548926ef819279876e, type: 3}
+  runFootsteps: []
+  footstepVolume: 0.7
+  walkStepInterval: 0.0001
+  runStepInterval: 0.3
+  jumpSound: {fileID: 0}
+  landingSound: {fileID: 0}
+  jumpVolume: 0.8
+  landingVolume: 0.9
 --- !u!1001 &859282413
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4442,7 +4464,17 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 486448074966129059, guid: beb24022f1709b04e81298f9a1fbeca6,
         type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 486448074966129059, guid: beb24022f1709b04e81298f9a1fbeca6,
+        type: 3}
       propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6754088868530474203, guid: beb24022f1709b04e81298f9a1fbeca6,
+        type: 3}
+      propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6754088868530474203, guid: beb24022f1709b04e81298f9a1fbeca6,
@@ -6568,7 +6600,7 @@ AudioSource:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1592468503}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
@@ -6664,7 +6696,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1592468503}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 228b8aca339a2814fbb0425512c291b4, type: 3}
   m_Name: 
