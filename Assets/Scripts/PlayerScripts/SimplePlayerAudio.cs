@@ -60,20 +60,13 @@ public class SimplePlayerAudio : MonoBehaviour
     
     void Update()
     {
-        Debug.Log("SimplePlayerAudio Update called");
         HandleFootsteps();
         HandleJumpAndLanding();
     }
     
     void HandleFootsteps()
     {
-        Debug.Log("HandleFootsteps called");
-        
-        if (controller == null || playerMovement == null) 
-        {
-            Debug.Log($"Missing components - Controller: {controller != null}, PlayerMovement: {playerMovement != null}");
-            return;
-        }
+        if (controller == null || playerMovement == null) return;
         
         bool isGrounded = controller.isGrounded;
         
@@ -82,14 +75,11 @@ public class SimplePlayerAudio : MonoBehaviour
         float vertical = Input.GetAxisRaw("Vertical");
         bool isMoving = (Mathf.Abs(horizontal) > 0.1f || Mathf.Abs(vertical) > 0.1f);
         
-        Debug.Log($"Grounded: {isGrounded}, Input H: {horizontal:F2}, V: {vertical:F2}, Moving: {isMoving}");
-        
         if (isGrounded && isMoving)
         {
             footstepTimer += Time.deltaTime;
             
             float currentStepInterval = playerMovement.IsSprinting ? runStepInterval : walkStepInterval;
-            Debug.Log($"Footstep timer: {footstepTimer:F2}, Interval needed: {currentStepInterval}");
             
             if (footstepTimer >= currentStepInterval)
             {
@@ -142,16 +132,7 @@ public class SimplePlayerAudio : MonoBehaviour
                 // Use PlayOneShot without stopping - let sounds overlap naturally
                 audioSource.PlayOneShot(randomFootstep, footstepVolume);
                 lastFootstepTime = Time.time;
-                Debug.Log($"Playing footstep: {randomFootstep.name}");
             }
-            else
-            {
-                Debug.Log("Selected footstep clip is null!");
-            }
-        }
-        else
-        {
-            Debug.Log($"No footsteps available - Array: {currentFootsteps?.Length ?? 0}, AudioSource: {audioSource != null}");
         }
     }
     

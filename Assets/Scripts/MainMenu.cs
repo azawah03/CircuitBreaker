@@ -7,11 +7,27 @@ public class MainMenu : MonoBehaviour
 {
     public void PlayGame()
     {
-        SceneManager.LoadScene("NeonArena");
+        // Use GameManager if available, otherwise use direct scene loading
+        if (GameManager.Instance != null)
+        {
+            GameManager.Instance.StartGame();
+        }
+        else
+        {
+            SceneManager.LoadScene("NeonArena");
+        }
     }
 
     public void QuitGame()
     {
-        Application.Quit();
+        // Use GameManager if available for proper cleanup
+        if (GameManager.Instance != null)
+        {
+            GameManager.Instance.QuitGame();
+        }
+        else
+        {
+            Application.Quit();
+        }
     }
 }

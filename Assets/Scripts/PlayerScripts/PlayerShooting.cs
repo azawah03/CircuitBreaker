@@ -10,6 +10,10 @@ public class PlayerShooting : MonoBehaviour
 
     void Update()
     {
+        // Only allow shooting when game is in Playing state
+        if (GameManager.Instance != null && GameManager.Instance.currentState != GameState.Playing)
+            return;
+
         if (Input.GetMouseButton(0) && Time.time >= nextFireTime)
         {
             Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);

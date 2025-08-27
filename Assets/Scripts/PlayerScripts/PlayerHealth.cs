@@ -7,6 +7,7 @@ public class PlayerHealth : MonoBehaviour
     public float currentHealth = 100f;
     public delegate void OnHealthChanged(float current, float max);
     public event OnHealthChanged onHealthChanged;
+
     private bool isGameOver = false;
     private PowerUpManager powerUpManager;
 
@@ -32,8 +33,24 @@ public class PlayerHealth : MonoBehaviour
         if (currentHealth <= 0f && !isGameOver)
         {
             isGameOver = true;
-            Time.timeScale = 0f;
+            
+            // Use GameManager if available, otherwise fall back to old system
+            if (GameManager.Instance != null)
+            {
+                GameManager.Instance.PlayerDied();
+            }
+            else
+            {
+                Time.timeScale = 0f; // Fallback for old system
+            }
         }
+    }
+
+    public void ResetHealth()
+    {
+        currentHealth = maxHealth;
+        isGameOver = false;
+        onHealthChanged?.Invoke(currentHealth, maxHealth);
     }
 
     void OnGUI()

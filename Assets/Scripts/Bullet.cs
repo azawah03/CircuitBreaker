@@ -58,6 +58,12 @@ public class Bullet : MonoBehaviour
                 Debug.Log("Playing enemy hit sound from bullet");
             }
             
+            // Add score when enemy is destroyed
+            if (GameManager.Instance != null)
+            {
+                GameManager.Instance.AddScore(50); // 50 points per enemy
+            }
+            
             // Destroy enemy first
             Destroy(other.gameObject);
             
