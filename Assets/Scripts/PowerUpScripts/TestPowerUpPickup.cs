@@ -6,14 +6,11 @@ public class TestPowerUpPickup : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            // Show UI notification
+            // UI notification
             if (PowerUpUIManager.Instance != null)
             {
                 PowerUpUIManager.Instance.ShowPowerUpNotification(gameObject.name);
             }
-
-            // Destroy the power-up
-            Destroy(gameObject);
         }
     }
 }
