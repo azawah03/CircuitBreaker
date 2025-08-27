@@ -3,12 +3,32 @@
   "WorkspaceRootPath": "C:\\Users\\LordBob\\OneDrive\\Documents\\GitHub\\CircuitBreaker\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\LordBob\\OneDrive\\Documents\\GitHub\\CircuitBreaker\\Assets\\Scripts\\PowerUpScripts\\PowerUpManager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\PowerUpScripts\\PowerUpManager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\LordBob\\OneDrive\\Documents\\GitHub\\CircuitBreaker\\Assets\\Scripts\\PowerUpScripts\\PowerUpUIManager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\PowerUpScripts\\PowerUpUIManager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\LordBob\\OneDrive\\Documents\\GitHub\\CircuitBreaker\\Assets\\Scripts\\PowerUpScripts\\PowerUpSpawner.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\PowerUpScripts\\PowerUpSpawner.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\LordBob\\OneDrive\\Documents\\GitHub\\CircuitBreaker\\Assets\\Scripts\\MainMenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\MainMenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\LordBob\\OneDrive\\Documents\\GitHub\\CircuitBreaker\\Assets\\Scripts\\GameSceneInitializer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\GameSceneInitializer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\LordBob\\OneDrive\\Documents\\GitHub\\CircuitBreaker\\Assets\\Scripts\\GameManager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\GameManager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\LordBob\\OneDrive\\Documents\\GitHub\\CircuitBreaker\\Assets\\Scripts\\GameUI.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\GameUI.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\LordBob\\OneDrive\\Documents\\GitHub\\CircuitBreaker\\Assets\\Scripts\\PowerUpScripts\\PowerUpManager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\PowerUpScripts\\PowerUpManager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\LordBob\\OneDrive\\Documents\\GitHub\\CircuitBreaker\\Assets\\Scripts\\PlayerScripts\\PlayerHealth.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -23,10 +43,6 @@
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\PlayerScripts\\PlayerShooting.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\LordBob\\OneDrive\\Documents\\GitHub\\CircuitBreaker\\Assets\\Scripts\\PlayerScripts\\PlayerUI.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\PlayerScripts\\PlayerUI.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\LordBob\\OneDrive\\Documents\\GitHub\\CircuitBreaker\\Assets\\Scripts\\PlayerScripts\\PlayerMovement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\PlayerScripts\\PlayerMovement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -37,10 +53,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\LordBob\\OneDrive\\Documents\\GitHub\\CircuitBreaker\\Assets\\Scripts\\PlayerAudioProfile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\PlayerAudioProfile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\LordBob\\OneDrive\\Documents\\GitHub\\CircuitBreaker\\Assets\\Scripts\\MainMenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\MainMenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\LordBob\\OneDrive\\Documents\\GitHub\\CircuitBreaker\\Assets\\Scripts\\PowerUpVisual.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -54,23 +66,73 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "PowerUpSpawner.cs",
+              "DocumentMoniker": "C:\\Users\\LordBob\\OneDrive\\Documents\\GitHub\\CircuitBreaker\\Assets\\Scripts\\PowerUpScripts\\PowerUpSpawner.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\PowerUpScripts\\PowerUpSpawner.cs",
+              "ToolTip": "C:\\Users\\LordBob\\OneDrive\\Documents\\GitHub\\CircuitBreaker\\Assets\\Scripts\\PowerUpScripts\\PowerUpSpawner.cs",
+              "RelativeToolTip": "Assets\\Scripts\\PowerUpScripts\\PowerUpSpawner.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEwAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-27T18:16:50.018Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "GameSceneInitializer.cs",
+              "DocumentMoniker": "C:\\Users\\LordBob\\OneDrive\\Documents\\GitHub\\CircuitBreaker\\Assets\\Scripts\\GameSceneInitializer.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\GameSceneInitializer.cs",
+              "ToolTip": "C:\\Users\\LordBob\\OneDrive\\Documents\\GitHub\\CircuitBreaker\\Assets\\Scripts\\GameSceneInitializer.cs",
+              "RelativeToolTip": "Assets\\Scripts\\GameSceneInitializer.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-27T18:09:30.332Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "GameManager.cs",
+              "DocumentMoniker": "C:\\Users\\LordBob\\OneDrive\\Documents\\GitHub\\CircuitBreaker\\Assets\\Scripts\\GameManager.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\GameManager.cs",
+              "ToolTip": "C:\\Users\\LordBob\\OneDrive\\Documents\\GitHub\\CircuitBreaker\\Assets\\Scripts\\GameManager.cs",
+              "RelativeToolTip": "Assets\\Scripts\\GameManager.cs",
+              "ViewState": "AgIAANkAAAAAAAAAAABRwNwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-27T17:40:26.947Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "GameUI.cs",
+              "DocumentMoniker": "C:\\Users\\LordBob\\OneDrive\\Documents\\GitHub\\CircuitBreaker\\Assets\\Scripts\\GameUI.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\GameUI.cs",
+              "ToolTip": "C:\\Users\\LordBob\\OneDrive\\Documents\\GitHub\\CircuitBreaker\\Assets\\Scripts\\GameUI.cs",
+              "RelativeToolTip": "Assets\\Scripts\\GameUI.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-27T17:39:54Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
               "Title": "PowerUpUIManager.cs",
               "DocumentMoniker": "C:\\Users\\LordBob\\OneDrive\\Documents\\GitHub\\CircuitBreaker\\Assets\\Scripts\\PowerUpScripts\\PowerUpUIManager.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\PowerUpScripts\\PowerUpUIManager.cs",
               "ToolTip": "C:\\Users\\LordBob\\OneDrive\\Documents\\GitHub\\CircuitBreaker\\Assets\\Scripts\\PowerUpScripts\\PowerUpUIManager.cs",
               "RelativeToolTip": "Assets\\Scripts\\PowerUpScripts\\PowerUpUIManager.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAAAB0AAAAcAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-27T11:29:04.301Z"
+              "WhenOpened": "2025-08-27T11:29:04.301Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 8,
               "Title": "TestPowerUpPickup.cs",
               "DocumentMoniker": "C:\\Users\\LordBob\\OneDrive\\Documents\\GitHub\\CircuitBreaker\\Assets\\Scripts\\PowerUpScripts\\TestPowerUpPickup.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\PowerUpScripts\\TestPowerUpPickup.cs",
@@ -82,7 +144,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 6,
               "Title": "PowerUpManager.cs",
               "DocumentMoniker": "C:\\Users\\LordBob\\OneDrive\\Documents\\GitHub\\CircuitBreaker\\Assets\\Scripts\\PowerUpScripts\\PowerUpManager.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\PowerUpScripts\\PowerUpManager.cs",
@@ -90,12 +152,11 @@
               "RelativeToolTip": "Assets\\Scripts\\PowerUpScripts\\PowerUpManager.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAlAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-27T10:38:53.945Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-27T10:38:53.945Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 9,
               "Title": "PlayerShooting.cs",
               "DocumentMoniker": "C:\\Users\\LordBob\\OneDrive\\Documents\\GitHub\\CircuitBreaker\\Assets\\Scripts\\PlayerScripts\\PlayerShooting.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\PlayerScripts\\PlayerShooting.cs",
@@ -107,7 +168,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 12,
               "Title": "PlayerAudioProfile.cs",
               "DocumentMoniker": "C:\\Users\\LordBob\\OneDrive\\Documents\\GitHub\\CircuitBreaker\\Assets\\Scripts\\PlayerAudioProfile.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\PlayerAudioProfile.cs",
@@ -119,7 +180,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 10,
               "Title": "PlayerMovement.cs",
               "DocumentMoniker": "C:\\Users\\LordBob\\OneDrive\\Documents\\GitHub\\CircuitBreaker\\Assets\\Scripts\\PlayerScripts\\PlayerMovement.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\PlayerScripts\\PlayerMovement.cs",
@@ -131,19 +192,19 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 2,
               "Title": "MainMenu.cs",
               "DocumentMoniker": "C:\\Users\\LordBob\\OneDrive\\Documents\\GitHub\\CircuitBreaker\\Assets\\Scripts\\MainMenu.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\MainMenu.cs",
               "ToolTip": "C:\\Users\\LordBob\\OneDrive\\Documents\\GitHub\\CircuitBreaker\\Assets\\Scripts\\MainMenu.cs",
               "RelativeToolTip": "Assets\\Scripts\\MainMenu.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAA4AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-08-22T11:01:40.379Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 11,
               "Title": "PlayerAnimationController.cs",
               "DocumentMoniker": "C:\\Users\\LordBob\\OneDrive\\Documents\\GitHub\\CircuitBreaker\\Assets\\Scripts\\PlayerScripts\\PlayerAnimationController.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\PlayerScripts\\PlayerAnimationController.cs",
@@ -155,7 +216,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 13,
               "Title": "PowerUpVisual.cs",
               "DocumentMoniker": "C:\\Users\\LordBob\\OneDrive\\Documents\\GitHub\\CircuitBreaker\\Assets\\Scripts\\PowerUpVisual.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\PowerUpVisual.cs",
@@ -167,19 +228,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "PlayerUI.cs",
-              "DocumentMoniker": "C:\\Users\\LordBob\\OneDrive\\Documents\\GitHub\\CircuitBreaker\\Assets\\Scripts\\PlayerScripts\\PlayerUI.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\PlayerScripts\\PlayerUI.cs",
-              "ToolTip": "C:\\Users\\LordBob\\OneDrive\\Documents\\GitHub\\CircuitBreaker\\Assets\\Scripts\\PlayerScripts\\PlayerUI.cs",
-              "RelativeToolTip": "Assets\\Scripts\\PlayerScripts\\PlayerUI.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACIAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-31T17:30:27.614Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 7,
               "Title": "PlayerHealth.cs",
               "DocumentMoniker": "C:\\Users\\LordBob\\OneDrive\\Documents\\GitHub\\CircuitBreaker\\Assets\\Scripts\\PlayerScripts\\PlayerHealth.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\PlayerScripts\\PlayerHealth.cs",

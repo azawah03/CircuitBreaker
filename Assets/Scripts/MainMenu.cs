@@ -10,7 +10,7 @@ public class MainMenu : MonoBehaviour
         // Use GameManager if available, otherwise use direct scene loading
         if (GameManager.Instance != null)
         {
-            GameManager.Instance.StartGame();
+            GameManager.Instance.LoadScene("NeonArena");
         }
         else
         {

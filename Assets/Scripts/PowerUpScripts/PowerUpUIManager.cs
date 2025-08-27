@@ -28,24 +28,25 @@ public class PowerUpUIManager : MonoBehaviour
 
         // Set message based on power-up name
         string message = "";
-        switch (powerUpName)
+        if (powerUpName.Contains("SpeedBoost"))
         {
-            case "SpeedBoost":
-                message = "SPEED BOOST ACTIVATED!";
-                notificationText.color = Color.yellow;
-                break;
-            case "RapidFire":
-                message = "RAPID FIRE ACTIVATED!";
-                notificationText.color = Color.red;
-                break;
-            case "ShieldPowerup":
-                message = "SHIELD ACTIVATED!";
-                notificationText.color = Color.cyan;
-                break;
-            default:
-                message = "POWER-UP ACTIVATED!";
-                notificationText.color = Color.white;
-                break;
+            message = "SPEED BOOST ACTIVATED!";
+            notificationText.color = Color.yellow;
+        }
+        else if (powerUpName.Contains("RapidFire"))
+        {
+            message = "RAPID FIRE ACTIVATED!";
+            notificationText.color = Color.red;
+        }
+        else if (powerUpName.Contains("Shield"))
+        {
+            message = "SHIELD ACTIVATED!";
+            notificationText.color = Color.cyan;
+        }
+        else
+        {
+            message = "POWER-UP ACTIVATED!";
+            notificationText.color = Color.white;
         }
 
         notificationText.text = message;

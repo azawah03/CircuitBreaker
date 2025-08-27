@@ -1,12 +1,13 @@
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class GameUI : MonoBehaviour
 {
     [Header("UI References")]
     public Text scoreText;
     public Text livesText;
-    public Text timerText;
+    public TextMeshProUGUI timerText;
     public Slider healthSlider;
     public GameObject pauseMenu;
     public GameObject gameOverScreen;
@@ -48,8 +49,23 @@ public class GameUI : MonoBehaviour
         if (timerText != null && GameManager.Instance != null)
         {
             float gameTimer = GameManager.Instance.gameTimer;
-            int minutes = Mathf.FloorToInt(gameTimer / 60);
-            int seconds = Mathf.FloorToInt(gameTimer % 60);
+
+            // count down
+            float timeRemaining = 300f - gameTimer;
+
+            // Check if time is up
+            if (timeRemaining <= 0)
+            {
+                timeRemaining = 0;
+                // You survived 5 minutes
+                if (GameManager.Instance.currentState == GameState.Playing)
+                {
+                    GameManager.Instance.Victory();
+                }
+            }
+
+            int minutes = Mathf.FloorToInt(timeRemaining / 60);
+            int seconds = Mathf.FloorToInt(timeRemaining % 60);
             timerText.text = string.Format("Time: {0:00}:{1:00}", minutes, seconds);
         }
     }

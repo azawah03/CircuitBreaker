@@ -1716,6 +1716,111 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1092689228}
   m_CullTransparentMesh: 0
+--- !u!1 &1319091074
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1319091077}
+  - component: {fileID: 1319091076}
+  - component: {fileID: 1319091075}
+  m_Layer: 0
+  m_Name: GameManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1319091075
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1319091074}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6e98f2fb0196f5445b36f92753a11334, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scoreText: {fileID: 0}
+  livesText: {fileID: 0}
+  timerText: {fileID: 0}
+  healthSlider: {fileID: 0}
+  pauseMenu: {fileID: 0}
+  gameOverScreen: {fileID: 0}
+--- !u!114 &1319091076
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1319091074}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0fc8eb7a5c7792240b5d03da7646c15a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentState: 0
+  debugMode: 0
+  playerPrefab: {fileID: 0}
+  playerSpawnPoint: {fileID: 0}
+  playerHealth: {fileID: 0}
+  playerMovement: {fileID: 0}
+  playerShooting: {fileID: 0}
+  mainMenuSceneName: MainMenu
+  gameSceneName: GameScene
+  loadingScreen: {fileID: 0}
+  loadingProgressBar: {fileID: 0}
+  playerScore: 0
+  playerLives: 3
+  maxLives: 3
+  gameTimer: 0
+  isTimerActive: 0
+  mainMenuUI: {fileID: 0}
+  gameUI: {fileID: 0}
+  pauseMenuUI: {fileID: 0}
+  gameOverUI: {fileID: 0}
+  victoryUI: {fileID: 0}
+  scoreText: {fileID: 0}
+  livesText: {fileID: 0}
+  timerText: {fileID: 0}
+  healthSlider: {fileID: 0}
+  backgroundMusicSource: {fileID: 0}
+  mainMenuMusic: {fileID: 0}
+  gameplayMusic: {fileID: 0}
+  victoryMusic: {fileID: 0}
+  gameOverMusic: {fileID: 0}
+  masterVolume: 1
+  musicVolume: 0.7
+  sfxVolume: 0.8
+  autoSave: 1
+  autoSaveInterval: 30
+  gameData:
+    highScore: 0
+    totalPlayTime: 0
+    masterVolume: 0
+    musicVolume: 0
+    sfxVolume: 0
+    lastCheckpoint: 
+    lastPlayerPosition: {x: 0, y: 0, z: 0}
+--- !u!4 &1319091077
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1319091074}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 748.58905, y: 361.15668, z: -56.825256}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1326334893
 GameObject:
   m_ObjectHideFlags: 0
@@ -1780,7 +1885,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1421689006
 GameObject:

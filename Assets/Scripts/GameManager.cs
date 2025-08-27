@@ -2,6 +2,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 
 public enum GameState
 {
@@ -49,7 +50,7 @@ public class GameManager : MonoBehaviour
     public GameObject victoryUI;
     public UnityEngine.UI.Text scoreText;
     public UnityEngine.UI.Text livesText;
-    public UnityEngine.UI.Text timerText;
+    public TMPro.TextMeshProUGUI timerText;
     public UnityEngine.UI.Slider healthSlider;
 
     [Header("Audio Management")]
