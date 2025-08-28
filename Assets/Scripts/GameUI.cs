@@ -5,8 +5,8 @@ using TMPro;
 public class GameUI : MonoBehaviour
 {
     [Header("UI References")]
-    public Text scoreText;
-    public Text livesText;
+    public TextMeshProUGUI scoreText;
+    public TextMeshProUGUI livesText;
     public TextMeshProUGUI timerText;
     public Slider healthSlider;
     public GameObject pauseMenu;
