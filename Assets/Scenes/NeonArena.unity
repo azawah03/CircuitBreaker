@@ -616,6 +616,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: RobotElite
       objectReference: {fileID: 0}
+    - target: {fileID: 1709427728825182, guid: 9716d47b2011bef4fa3cbe078f1db221, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4348525283943750, guid: 9716d47b2011bef4fa3cbe078f1db221, type: 3}
       propertyPath: m_RootOrder
       value: 14
@@ -1078,16 +1082,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyTypes:
-  - prefab: {fileID: 1063395640}
+  - prefab: {fileID: 6632001730068188571, guid: aca9a532dec8d0248a308056220a0f0e,
+      type: 3}
     moveSpeed: 8
     damage: 20
     explosionEffect: {fileID: 656927687}
-    spawnY: 4
-  - prefab: {fileID: 547469129}
+    spawnY: 1.5
+  - prefab: {fileID: 4997267856341783140, guid: f940166c4cd74aa4eb869ce537be0729,
+      type: 3}
     moveSpeed: 3
     damage: 40
     explosionEffect: {fileID: 656927687}
-    spawnY: 1.5
+    spawnY: 0
   spawnPoints:
   - {fileID: 469802933}
   - {fileID: 1614747352}
@@ -1727,6 +1733,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: EnemyRobot
       objectReference: {fileID: 0}
+    - target: {fileID: 1262010245510058, guid: d0e2b6bf944e12c439220558bf7de75a, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4530880045128832, guid: d0e2b6bf944e12c439220558bf7de75a, type: 3}
       propertyPath: m_RootOrder
       value: 15
@@ -1797,7 +1807,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 469802932}
   m_LocalRotation: {x: -0, y: -0, z: 1, w: 0}
-  m_LocalPosition: {x: 106.10155, y: 0.29999834, z: -238.3}
+  m_LocalPosition: {x: 128.8, y: 0.29999834, z: -252.58}
   m_LocalScale: {x: 18.94361, y: 18.94361, z: 18.94361}
   m_Children: []
   m_Father: {fileID: 0}
@@ -8823,12 +8833,6 @@ Light:
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
---- !u!1 &1063395640 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1650463087692150, guid: beb24022f1709b04e81298f9a1fbeca6,
-    type: 3}
-  m_PrefabInstance: {fileID: 1121652305}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1065059580
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9146,6 +9150,10 @@ PrefabInstance:
     - target: {fileID: 1650463087692150, guid: beb24022f1709b04e81298f9a1fbeca6, type: 3}
       propertyPath: m_Name
       value: KamikazeBot
+      objectReference: {fileID: 0}
+    - target: {fileID: 1650463087692150, guid: beb24022f1709b04e81298f9a1fbeca6, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4867624584437994, guid: beb24022f1709b04e81298f9a1fbeca6, type: 3}
       propertyPath: m_RootOrder
