@@ -7,7 +7,7 @@ public class PlayerMovement : MonoBehaviour
     public float moveSpeed = 7f;
     public float gravity = -10f;
     public float rotationSpeed = 10f;
-    public float jumpHeight = 8f;
+    public float jumpHeight = 6f;
     public float sprintSpeed = 12f;
     public float stamina = 5f;
     public float maxStamina = 5f;
