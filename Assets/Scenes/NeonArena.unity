@@ -618,7 +618,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1709427728825182, guid: 9716d47b2011bef4fa3cbe078f1db221, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4348525283943750, guid: 9716d47b2011bef4fa3cbe078f1db221, type: 3}
       propertyPath: m_RootOrder
@@ -2554,7 +2554,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   masterVolume: 1
-  musicVolume: 0.016
+  musicVolume: 0.035
   sfxVolume: 1
 --- !u!4 &613785765
 Transform:
@@ -9153,7 +9153,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1650463087692150, guid: beb24022f1709b04e81298f9a1fbeca6, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4867624584437994, guid: beb24022f1709b04e81298f9a1fbeca6, type: 3}
       propertyPath: m_RootOrder
