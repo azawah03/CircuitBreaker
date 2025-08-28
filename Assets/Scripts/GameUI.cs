@@ -9,6 +9,8 @@ public class GameUI : MonoBehaviour
     public TextMeshProUGUI livesText;
     public TextMeshProUGUI timerText;
     public Slider healthSlider;
+    public Slider staminaSlider;  
+    private PlayerMovement playerMovement;  
     public GameObject pauseMenu;
     public GameObject gameOverScreen;
 
@@ -20,6 +22,13 @@ public class GameUI : MonoBehaviour
             GameManager.Instance.OnScoreChanged += UpdateScore;
             GameManager.Instance.OnLivesChanged += UpdateLives;
         }
+
+        // Find player movement for stamina tracking
+        GameObject player = GameObject.FindGameObjectWithTag("Player");
+        if (player != null)
+        {
+            playerMovement = player.GetComponent<PlayerMovement>();
+        }
     }
 
     void Update()
@@ -29,6 +38,7 @@ public class GameUI : MonoBehaviour
         {
             UpdateTimer();
             UpdateHealthBar();
+            UpdateStaminaBar();
         }
     }
 
@@ -76,6 +86,15 @@ public class GameUI : MonoBehaviour
         {
             PlayerHealth playerHealth = GameManager.Instance.playerHealth;
             healthSlider.value = playerHealth.currentHealth / playerHealth.maxHealth;
+        }
+    }
+
+    void UpdateStaminaBar()
+    {
+        if (staminaSlider != null && playerMovement != null)
+        {
+            staminaSlider.maxValue = playerMovement.maxStamina;
+            staminaSlider.value = playerMovement.stamina;
         }
     }
 
