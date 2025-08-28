@@ -7,6 +7,15 @@ public class GameSceneInitializer : MonoBehaviour
         // When the game scene loads, tell GameManager to start playing
         if (GameManager.Instance != null)
         {
+            // Find and assign player references
+            GameObject player = GameObject.FindGameObjectWithTag("Player");
+            if (player != null)
+            {
+                GameManager.Instance.playerHealth = player.GetComponent<PlayerHealth>();
+                GameManager.Instance.playerMovement = player.GetComponent<PlayerMovement>();
+                GameManager.Instance.playerShooting = player.GetComponent<PlayerShooting>();
+            }
+
             GameManager.Instance.ChangeGameState(GameState.Playing);
         }
         else
