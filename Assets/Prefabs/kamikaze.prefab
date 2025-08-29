@@ -128,8 +128,9 @@ MonoBehaviour:
   moveSpeed: 3
   rotationSpeed: 5
   hitSound: {fileID: 8300000, guid: 8ade91eb95b5fff4cbe2d6b5934845bb, type: 3}
+  hitSoundVolume: 0.054
   ambientSound: {fileID: 8300000, guid: 124063affaebf784d880f6e8ad7fb9bc, type: 3}
-  ambientVolume: 0.8
+  ambientVolume: 0.609
   ambientSoundDelay: 2
   randomizePitch: 1
   explosionRadius: 3

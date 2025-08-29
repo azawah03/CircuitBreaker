@@ -2397,6 +2397,7 @@ MonoBehaviour:
   moveSpeed: 3
   rotationSpeed: 5
   hitSound: {fileID: 8300000, guid: 8ade91eb95b5fff4cbe2d6b5934845bb, type: 3}
+  hitSoundVolume: 0.8
   ambientSound: {fileID: 8300000, guid: 124063affaebf784d880f6e8ad7fb9bc, type: 3}
   ambientVolume: 1
   ambientSoundDelay: 2
@@ -2848,8 +2849,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   masterVolume: 1
-  musicVolume: 0.035
-  sfxVolume: 1
+  musicVolume: 0.117
+  sfxVolume: 0.192
 --- !u!4 &613785765
 Transform:
   m_ObjectHideFlags: 0
@@ -12025,6 +12026,7 @@ MonoBehaviour:
   moveSpeed: 3
   rotationSpeed: 5
   hitSound: {fileID: 8300000, guid: 8ade91eb95b5fff4cbe2d6b5934845bb, type: 3}
+  hitSoundVolume: 0.8
   ambientSound: {fileID: 8300000, guid: d699f53998be27a4ca196f597b17831e, type: 3}
   ambientVolume: 1
   ambientSoundDelay: 2

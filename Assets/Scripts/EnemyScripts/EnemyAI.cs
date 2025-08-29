@@ -12,6 +12,8 @@ public class EnemyAI : MonoBehaviour
 
     [Header("Audio")]
     public AudioClip hitSound;
+    [Range(0f, 2f)]
+    public float hitSoundVolume = 0.8f; // Volume control for hit sound
     public AudioClip ambientSound;
     [Range(0f, 2f)] // Allow volumes above 1 for ambient sounds
     public float ambientVolume = 0.8f; // Much higher default volume
@@ -23,6 +25,39 @@ public class EnemyAI : MonoBehaviour
     protected virtual void Start()
     {
         SetupAudio();
+    }
+    
+    // Add this method to test hit sound volume directly
+    [System.Obsolete("This method is for testing volume only")]
+    public void TestHitSound()
+    {
+        if (audioSource != null && hitSound != null)
+        {
+            Debug.Log($"Testing hit sound with volume: {hitSoundVolume}");
+            audioSource.PlayOneShot(hitSound, hitSoundVolume);
+        }
+    }
+    
+    // Method to play hit sound (called by bullets)
+    public void PlayHitSound()
+    {
+        Debug.Log("Enemy PlayHitSound called - HitSound: " + (hitSound != null));
+        
+        if (hitSound != null)
+        {
+            if (audioSource == null)
+                audioSource = GetComponent<AudioSource>();
+                
+            Debug.Log("Enemy AudioSource: " + (audioSource != null));
+            
+            if (audioSource != null)
+            {
+                // Ensure AudioSource is enabled and use the volume control
+                audioSource.enabled = true;
+                audioSource.PlayOneShot(hitSound, hitSoundVolume);
+                Debug.Log($"Playing enemy hit sound - Volume: {hitSoundVolume}");
+            }
+        }
     }
 
     void SetupAudio()
@@ -122,27 +157,6 @@ public class EnemyAI : MonoBehaviour
         Vector3 direction = (destination - transform.position).normalized;
         direction.y = 0f;
         transform.position += direction * moveSpeed * Time.deltaTime;
-    }
-
-    public void PlayHitSound()
-    {
-        Debug.Log("Enemy PlayHitSound called - HitSound: " + (hitSound != null));
-        
-        if (hitSound != null)
-        {
-            if (audioSource == null)
-                audioSource = GetComponent<AudioSource>();
-                
-            Debug.Log("Enemy AudioSource: " + (audioSource != null));
-            
-            if (audioSource != null)
-            {
-                // Ensure AudioSource is enabled
-                audioSource.enabled = true;
-                audioSource.PlayOneShot(hitSound);
-                Debug.Log("Playing enemy hit sound");
-            }
-        }
     }
 
     public void StopAmbientSound()

@@ -13,16 +13,32 @@ public class Bullet : MonoBehaviour
     void Start()
     {
         audioSource = GetComponent<AudioSource>();
-        Debug.Log("Bullet Start - AudioSource: " + (audioSource != null) + ", FireSound: " + (fireSound != null));
+        if (audioSource == null)
+        {
+            audioSource = gameObject.AddComponent<AudioSource>();
+            audioSource.volume = 1.7f;
+            Debug.Log("Bullet: Added missing AudioSource");
+        }
         
+        Debug.Log($"Bullet Start - AudioSource: {audioSource != null}, FireSound: {fireSound != null}, AudioManager: {AudioManager.Instance != null}");
+        
+        // Play fire sound
         if (fireSound != null && audioSource != null)
         {
-            AudioManager.PlaySFX(audioSource, fireSound);
-            Debug.Log("Playing fire sound");
+            if (AudioManager.Instance != null)
+            {
+                AudioManager.PlaySFX(audioSource, fireSound);
+                Debug.Log("Playing fire sound via AudioManager");
+            }
+            else
+            {
+                audioSource.PlayOneShot(fireSound, 1.7f);
+                Debug.Log("Playing fire sound directly (no AudioManager)");
+            }
         }
         else
         {
-            Debug.Log("Cannot play fire sound - missing AudioSource or AudioClip");
+            Debug.LogWarning("Cannot play fire sound - missing AudioSource or AudioClip");
         }
         
         Destroy(gameObject, lifetime);
@@ -42,20 +58,40 @@ public class Bullet : MonoBehaviour
             // Play hit sound from bullet's audio source
             if (hitSound != null && audioSource != null)
             {
-                AudioManager.PlaySFX(audioSource, hitSound);
-                Debug.Log("Playing hit sound");
+                if (AudioManager.Instance != null)
+                {
+                    AudioManager.PlaySFX(audioSource, hitSound);
+                    Debug.Log("Playing hit sound via AudioManager");
+                }
+                else
+                {
+                    audioSource.PlayOneShot(hitSound, 1.7f);
+                    Debug.Log("Playing hit sound directly (no AudioManager)");
+                }
             }
             else
             {
-                Debug.Log("Cannot play hit sound - missing AudioSource or AudioClip");
+                Debug.LogWarning("Cannot play hit sound - missing AudioSource or AudioClip");
             }
             
-            // Get enemy hit sound and play it from bullet's audio source
+            // Get enemy hit sound and play it
             EnemyAI enemy = other.GetComponent<EnemyAI>();
             if (enemy != null && enemy.hitSound != null && audioSource != null)
             {
-                AudioManager.PlaySFX(audioSource, enemy.hitSound);
-                Debug.Log("Playing enemy hit sound from bullet");
+                float finalVolume = enemy.hitSoundVolume;
+                
+                if (AudioManager.Instance != null)
+                {
+                    // Calculate the final volume that will be applied
+                    float totalVolume = AudioManager.Instance.sfxVolume * AudioManager.Instance.masterVolume * enemy.hitSoundVolume;
+                    AudioManager.PlaySFX(audioSource, enemy.hitSound, enemy.hitSoundVolume);
+                    Debug.Log($"Playing enemy hit sound via AudioManager - Enemy Volume: {enemy.hitSoundVolume}, Final Volume: {totalVolume}");
+                }
+                else
+                {
+                    audioSource.PlayOneShot(enemy.hitSound, finalVolume);
+                    Debug.Log($"Playing enemy hit sound directly - Volume: {finalVolume}");
+                }
             }
             
             // Add score when enemy is destroyed

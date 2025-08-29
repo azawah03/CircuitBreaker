@@ -130,6 +130,7 @@ MonoBehaviour:
   moveSpeed: 3
   rotationSpeed: 5
   hitSound: {fileID: 8300000, guid: 8ade91eb95b5fff4cbe2d6b5934845bb, type: 3}
+  hitSoundVolume: 0.039
   ambientSound: {fileID: 8300000, guid: f3fb4f4bc01887f419d3a74c1191b64b, type: 3}
   ambientVolume: 0.8
   ambientSoundDelay: 2
