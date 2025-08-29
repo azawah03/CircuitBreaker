@@ -129,10 +129,10 @@ MonoBehaviour:
   target: {fileID: 0}
   moveSpeed: 3
   rotationSpeed: 5
-  hitSound: {fileID: 8300000, guid: 8ade91eb95b5fff4cbe2d6b5934845bb, type: 3}
-  hitSoundVolume: 0.039
+  hitSound: {fileID: 8300000, guid: 51031005fe86fe749bbacae65442f252, type: 3}
+  hitSoundVolume: 2
   ambientSound: {fileID: 8300000, guid: f3fb4f4bc01887f419d3a74c1191b64b, type: 3}
-  ambientVolume: 0.8
+  ambientVolume: 0.113
   ambientSoundDelay: 2
   randomizePitch: 1
   firePoint: {fileID: 7591270413536817891}

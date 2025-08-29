@@ -2849,8 +2849,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   masterVolume: 1
-  musicVolume: 0.117
-  sfxVolume: 0.192
+  musicVolume: 0.016
+  sfxVolume: 1
 --- !u!4 &613785765
 Transform:
   m_ObjectHideFlags: 0

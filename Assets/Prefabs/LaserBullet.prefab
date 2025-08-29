@@ -117,7 +117,7 @@ MonoBehaviour:
   speed: 20
   lifetime: 2
   fireSound: {fileID: 8300000, guid: f49972648addee24e8693046b5e444b3, type: 3}
-  hitSound: {fileID: 8300000, guid: 8ade91eb95b5fff4cbe2d6b5934845bb, type: 3}
+  hitSound: {fileID: 8300000, guid: 51031005fe86fe749bbacae65442f252, type: 3}
 --- !u!65 &3159216751689096251
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -187,7 +187,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 0
+      value: 0.5
       inSlope: 0
       outSlope: 0
       tangentMode: 0
