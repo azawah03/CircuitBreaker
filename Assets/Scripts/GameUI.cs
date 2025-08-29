@@ -13,6 +13,7 @@ public class GameUI : MonoBehaviour
     private PlayerMovement playerMovement;  
     public GameObject pauseMenu;
     public GameObject gameOverScreen;
+    public GameObject victoryScreen;
 
     void Start()
     {
@@ -70,6 +71,8 @@ public class GameUI : MonoBehaviour
                 // You survived 5 minutes
                 if (GameManager.Instance.currentState == GameState.Playing)
                 {
+                    victoryScreen.SetActive(true);
+                    UnlockCursor();
                     GameManager.Instance.Victory();
                 }
             }
@@ -121,6 +124,12 @@ public class GameUI : MonoBehaviour
     {
         if (GameManager.Instance != null)
             GameManager.Instance.QuitGame();
+    }
+
+    private void UnlockCursor()
+    {
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
     }
 
     void OnDestroy()

@@ -3,16 +3,32 @@
   "WorkspaceRootPath": "C:\\Users\\LordBob\\OneDrive\\Documents\\GitHub\\CircuitBreaker\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\LordBob\\OneDrive\\Documents\\GitHub\\CircuitBreaker\\Assets\\Scripts\\Bullet.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\Bullet.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\LordBob\\OneDrive\\Documents\\GitHub\\CircuitBreaker\\Assets\\Scripts\\PlayerScripts\\PlayerShooting.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\PlayerScripts\\PlayerShooting.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\LordBob\\OneDrive\\Documents\\GitHub\\CircuitBreaker\\Assets\\Scripts\\EnemyScripts\\Bots\\RangedBot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\EnemyScripts\\Bots\\RangedBot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\LordBob\\OneDrive\\Documents\\GitHub\\CircuitBreaker\\Assets\\Scripts\\GameManager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\GameManager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\LordBob\\OneDrive\\Documents\\GitHub\\CircuitBreaker\\Assets\\Scripts\\GameUI.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\GameUI.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\LordBob\\OneDrive\\Documents\\GitHub\\CircuitBreaker\\Assets\\VolumetricLines\\Scripts\\VolumetricLineBehavior.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\VolumetricLines\\Scripts\\VolumetricLineBehavior.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\LordBob\\OneDrive\\Documents\\GitHub\\CircuitBreaker\\Assets\\Scripts\\GameSceneInitializer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\GameSceneInitializer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\LordBob\\OneDrive\\Documents\\GitHub\\CircuitBreaker\\Assets\\Scripts\\Bullet.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\Bullet.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\LordBob\\OneDrive\\Documents\\GitHub\\CircuitBreaker\\Assets\\Scripts\\VictoryButton.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\VictoryButton.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,45 +38,92 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
+              "Title": "RangedBot.cs",
+              "DocumentMoniker": "C:\\Users\\LordBob\\OneDrive\\Documents\\GitHub\\CircuitBreaker\\Assets\\Scripts\\EnemyScripts\\Bots\\RangedBot.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\EnemyScripts\\Bots\\RangedBot.cs",
+              "ToolTip": "C:\\Users\\LordBob\\OneDrive\\Documents\\GitHub\\CircuitBreaker\\Assets\\Scripts\\EnemyScripts\\Bots\\RangedBot.cs",
+              "RelativeToolTip": "Assets\\Scripts\\EnemyScripts\\Bots\\RangedBot.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-29T18:49:58.158Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "PlayerShooting.cs",
+              "DocumentMoniker": "C:\\Users\\LordBob\\OneDrive\\Documents\\GitHub\\CircuitBreaker\\Assets\\Scripts\\PlayerScripts\\PlayerShooting.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\PlayerScripts\\PlayerShooting.cs",
+              "ToolTip": "C:\\Users\\LordBob\\OneDrive\\Documents\\GitHub\\CircuitBreaker\\Assets\\Scripts\\PlayerScripts\\PlayerShooting.cs",
+              "RelativeToolTip": "Assets\\Scripts\\PlayerScripts\\PlayerShooting.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-29T18:48:34.327Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "GameManager.cs",
+              "DocumentMoniker": "C:\\Users\\LordBob\\OneDrive\\Documents\\GitHub\\CircuitBreaker\\Assets\\Scripts\\GameManager.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\GameManager.cs",
+              "ToolTip": "C:\\Users\\LordBob\\OneDrive\\Documents\\GitHub\\CircuitBreaker\\Assets\\Scripts\\GameManager.cs",
+              "RelativeToolTip": "Assets\\Scripts\\GameManager.cs",
+              "ViewState": "AgIAAAcAAAAAAAAAAAAawCkAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-29T18:32:57.851Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "GameSceneInitializer.cs",
+              "DocumentMoniker": "C:\\Users\\LordBob\\OneDrive\\Documents\\GitHub\\CircuitBreaker\\Assets\\Scripts\\GameSceneInitializer.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\GameSceneInitializer.cs",
+              "ToolTip": "C:\\Users\\LordBob\\OneDrive\\Documents\\GitHub\\CircuitBreaker\\Assets\\Scripts\\GameSceneInitializer.cs",
+              "RelativeToolTip": "Assets\\Scripts\\GameSceneInitializer.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-29T18:23:44.869Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "VictoryButton.cs",
+              "DocumentMoniker": "C:\\Users\\LordBob\\OneDrive\\Documents\\GitHub\\CircuitBreaker\\Assets\\Scripts\\VictoryButton.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\VictoryButton.cs",
+              "ToolTip": "C:\\Users\\LordBob\\OneDrive\\Documents\\GitHub\\CircuitBreaker\\Assets\\Scripts\\VictoryButton.cs",
+              "RelativeToolTip": "Assets\\Scripts\\VictoryButton.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-29T17:51:06.29Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "GameUI.cs",
               "DocumentMoniker": "C:\\Users\\LordBob\\OneDrive\\Documents\\GitHub\\CircuitBreaker\\Assets\\Scripts\\GameUI.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\GameUI.cs",
               "ToolTip": "C:\\Users\\LordBob\\OneDrive\\Documents\\GitHub\\CircuitBreaker\\Assets\\Scripts\\GameUI.cs",
               "RelativeToolTip": "Assets\\Scripts\\GameUI.cs",
-              "ViewState": "AgIAABUAAAAAAAAAAAAAACgAAAAfAAAAAAAAAA==",
+              "ViewState": "AgIAACoAAAAAAAAAAAAAAEoAAAAjAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-28T16:26:01.905Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-28T16:26:01.905Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "VolumetricLineBehavior.cs",
-              "DocumentMoniker": "C:\\Users\\LordBob\\OneDrive\\Documents\\GitHub\\CircuitBreaker\\Assets\\VolumetricLines\\Scripts\\VolumetricLineBehavior.cs",
-              "RelativeDocumentMoniker": "Assets\\VolumetricLines\\Scripts\\VolumetricLineBehavior.cs",
-              "ToolTip": "C:\\Users\\LordBob\\OneDrive\\Documents\\GitHub\\CircuitBreaker\\Assets\\VolumetricLines\\Scripts\\VolumetricLineBehavior.cs",
-              "RelativeToolTip": "Assets\\VolumetricLines\\Scripts\\VolumetricLineBehavior.cs",
-              "ViewState": "AgIAACEAAAAAAAAAAAAAADkAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-28T11:23:30.336Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "Bullet.cs",
               "DocumentMoniker": "C:\\Users\\LordBob\\OneDrive\\Documents\\GitHub\\CircuitBreaker\\Assets\\Scripts\\Bullet.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Bullet.cs",
               "ToolTip": "C:\\Users\\LordBob\\OneDrive\\Documents\\GitHub\\CircuitBreaker\\Assets\\Scripts\\Bullet.cs",
               "RelativeToolTip": "Assets\\Scripts\\Bullet.cs",
-              "ViewState": "AgIAAD8AAAAAAAAAAAAAAE4AAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAFoAAAAAAAAAAAAAAEEAAAA4AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-28T11:16:26.736Z"
+              "WhenOpened": "2025-08-28T11:16:26.736Z",
+              "EditorCaption": ""
             }
           ]
         }
