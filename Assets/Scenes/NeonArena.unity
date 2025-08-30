@@ -162,7 +162,7 @@ MonoBehaviour:
         explosionEffect: {fileID: 656927687}
         spawnY: 1
       enemyCount: 2
-      spawnDelay: 1
+      spawnDelay: 10
       spawnSimultaneously: 0
     - enemyType:
         prefab: {fileID: 4997267856341783140, guid: f940166c4cd74aa4eb869ce537be0729,
@@ -172,30 +172,10 @@ MonoBehaviour:
         explosionEffect: {fileID: 656927687}
         spawnY: 0
       enemyCount: 2
-      spawnDelay: 2
+      spawnDelay: 5
       spawnSimultaneously: 0
-    - enemyType:
-        prefab: {fileID: 6632001730068188571, guid: aca9a532dec8d0248a308056220a0f0e,
-          type: 3}
-        moveSpeed: 3
-        damage: 10
-        explosionEffect: {fileID: 656927687}
-        spawnY: 1
-      enemyCount: 2
-      spawnDelay: 3
-      spawnSimultaneously: 1
-    - enemyType:
-        prefab: {fileID: 4997267856341783140, guid: f940166c4cd74aa4eb869ce537be0729,
-          type: 3}
-        moveSpeed: 3
-        damage: 10
-        explosionEffect: {fileID: 656927687}
-        spawnY: 0
-      enemyCount: 2
-      spawnDelay: 4
-      spawnSimultaneously: 0
-    timeBetweenEnemySpawns: 2
-    timeBeforeNextWave: 8
+    timeBetweenEnemySpawns: 5
+    timeBeforeNextWave: 0
     enemySpeedMultiplier: 1
     enemyHealthMultiplier: 1
     enemyDamageMultiplier: 1
@@ -205,52 +185,12 @@ MonoBehaviour:
     - enemyType:
         prefab: {fileID: 6632001730068188571, guid: aca9a532dec8d0248a308056220a0f0e,
           type: 3}
-        moveSpeed: 5
-        damage: 15
-        explosionEffect: {fileID: 656927687}
-        spawnY: 1
-      enemyCount: 5
-      spawnDelay: 1
-      spawnSimultaneously: 1
-    - enemyType:
-        prefab: {fileID: 4997267856341783140, guid: f940166c4cd74aa4eb869ce537be0729,
-          type: 3}
-        moveSpeed: 5
-        damage: 15
-        explosionEffect: {fileID: 656927687}
-        spawnY: 0
-      enemyCount: 5
-      spawnDelay: 2
-      spawnSimultaneously: 1
-    - enemyType:
-        prefab: {fileID: 6632001730068188571, guid: aca9a532dec8d0248a308056220a0f0e,
-          type: 3}
-        moveSpeed: 3
-        damage: 15
-        explosionEffect: {fileID: 656927687}
-        spawnY: 1
-      enemyCount: 5
-      spawnDelay: 3
-      spawnSimultaneously: 1
-    - enemyType:
-        prefab: {fileID: 4997267856341783140, guid: f940166c4cd74aa4eb869ce537be0729,
-          type: 3}
-        moveSpeed: 3
-        damage: 10
-        explosionEffect: {fileID: 656927687}
-        spawnY: 0
-      enemyCount: 5
-      spawnDelay: 4
-      spawnSimultaneously: 0
-    - enemyType:
-        prefab: {fileID: 6632001730068188571, guid: aca9a532dec8d0248a308056220a0f0e,
-          type: 3}
         moveSpeed: 3
         damage: 10
         explosionEffect: {fileID: 656927687}
         spawnY: 1
       enemyCount: 3
-      spawnDelay: 4
+      spawnDelay: 10
       spawnSimultaneously: 0
     - enemyType:
         prefab: {fileID: 4997267856341783140, guid: f940166c4cd74aa4eb869ce537be0729,
@@ -259,86 +199,26 @@ MonoBehaviour:
         damage: 10
         explosionEffect: {fileID: 656927687}
         spawnY: 0
-      enemyCount: 5
-      spawnDelay: 4
+      enemyCount: 3
+      spawnDelay: 5
       spawnSimultaneously: 0
-    timeBetweenEnemySpawns: 1
-    timeBeforeNextWave: 8
-    enemySpeedMultiplier: 2
-    enemyHealthMultiplier: 2
-    enemyDamageMultiplier: 2
+    timeBetweenEnemySpawns: 4
+    timeBeforeNextWave: 0
+    enemySpeedMultiplier: 1.5
+    enemyHealthMultiplier: 1.5
+    enemyDamageMultiplier: 1.5
   - waveName: Wave 3
     waveNumber: 1
     enemyWaves:
     - enemyType:
         prefab: {fileID: 6632001730068188571, guid: aca9a532dec8d0248a308056220a0f0e,
           type: 3}
-        moveSpeed: 5
-        damage: 15
-        explosionEffect: {fileID: 656927687}
-        spawnY: 1
-      enemyCount: 7
-      spawnDelay: 1
-      spawnSimultaneously: 1
-    - enemyType:
-        prefab: {fileID: 4997267856341783140, guid: f940166c4cd74aa4eb869ce537be0729,
-          type: 3}
-        moveSpeed: 5
-        damage: 15
-        explosionEffect: {fileID: 656927687}
-        spawnY: 0
-      enemyCount: 7
-      spawnDelay: 2
-      spawnSimultaneously: 0
-    - enemyType:
-        prefab: {fileID: 6632001730068188571, guid: aca9a532dec8d0248a308056220a0f0e,
-          type: 3}
-        moveSpeed: 3
-        damage: 15
-        explosionEffect: {fileID: 656927687}
-        spawnY: 1
-      enemyCount: 7
-      spawnDelay: 3
-      spawnSimultaneously: 1
-    - enemyType:
-        prefab: {fileID: 4997267856341783140, guid: f940166c4cd74aa4eb869ce537be0729,
-          type: 3}
-        moveSpeed: 3
-        damage: 10
-        explosionEffect: {fileID: 656927687}
-        spawnY: 0
-      enemyCount: 7
-      spawnDelay: 3
-      spawnSimultaneously: 1
-    - enemyType:
-        prefab: {fileID: 6632001730068188571, guid: aca9a532dec8d0248a308056220a0f0e,
-          type: 3}
         moveSpeed: 3
         damage: 10
         explosionEffect: {fileID: 656927687}
         spawnY: 1
-      enemyCount: 7
-      spawnDelay: 3
-      spawnSimultaneously: 1
-    - enemyType:
-        prefab: {fileID: 4997267856341783140, guid: f940166c4cd74aa4eb869ce537be0729,
-          type: 3}
-        moveSpeed: 3
-        damage: 10
-        explosionEffect: {fileID: 656927687}
-        spawnY: 0
-      enemyCount: 7
-      spawnDelay: 3
-      spawnSimultaneously: 0
-    - enemyType:
-        prefab: {fileID: 6632001730068188571, guid: aca9a532dec8d0248a308056220a0f0e,
-          type: 3}
-        moveSpeed: 3
-        damage: 10
-        explosionEffect: {fileID: 656927687}
-        spawnY: 1
-      enemyCount: 7
-      spawnDelay: 2
+      enemyCount: 4
+      spawnDelay: 10
       spawnSimultaneously: 0
     - enemyType:
         prefab: {fileID: 4997267856341783140, guid: f940166c4cd74aa4eb869ce537be0729,
@@ -347,106 +227,26 @@ MonoBehaviour:
         damage: 10
         explosionEffect: {fileID: 656927687}
         spawnY: 0
-      enemyCount: 7
-      spawnDelay: 2
+      enemyCount: 4
+      spawnDelay: 10
       spawnSimultaneously: 0
-    - enemyType:
-        prefab: {fileID: 6632001730068188571, guid: aca9a532dec8d0248a308056220a0f0e,
-          type: 3}
-        moveSpeed: 3
-        damage: 10
-        explosionEffect: {fileID: 656927687}
-        spawnY: 1
-      enemyCount: 7
-      spawnDelay: 4
-      spawnSimultaneously: 1
-    - enemyType:
-        prefab: {fileID: 4997267856341783140, guid: f940166c4cd74aa4eb869ce537be0729,
-          type: 3}
-        moveSpeed: 3
-        damage: 10
-        explosionEffect: {fileID: 656927687}
-        spawnY: 0
-      enemyCount: 7
-      spawnDelay: 4
-      spawnSimultaneously: 1
-    timeBetweenEnemySpawns: 2
-    timeBeforeNextWave: 8
-    enemySpeedMultiplier: 2
-    enemyHealthMultiplier: 2
-    enemyDamageMultiplier: 2
+    timeBetweenEnemySpawns: 3
+    timeBeforeNextWave: 0
+    enemySpeedMultiplier: 1.8
+    enemyHealthMultiplier: 1.8
+    enemyDamageMultiplier: 1.8
   - waveName: Wave 4
     waveNumber: 1
     enemyWaves:
     - enemyType:
         prefab: {fileID: 6632001730068188571, guid: aca9a532dec8d0248a308056220a0f0e,
           type: 3}
-        moveSpeed: 5
-        damage: 15
-        explosionEffect: {fileID: 656927687}
-        spawnY: 1
-      enemyCount: 9
-      spawnDelay: 1
-      spawnSimultaneously: 1
-    - enemyType:
-        prefab: {fileID: 4997267856341783140, guid: f940166c4cd74aa4eb869ce537be0729,
-          type: 3}
-        moveSpeed: 5
-        damage: 15
-        explosionEffect: {fileID: 656927687}
-        spawnY: 0
-      enemyCount: 9
-      spawnDelay: 2
-      spawnSimultaneously: 1
-    - enemyType:
-        prefab: {fileID: 6632001730068188571, guid: aca9a532dec8d0248a308056220a0f0e,
-          type: 3}
-        moveSpeed: 3
-        damage: 15
-        explosionEffect: {fileID: 656927687}
-        spawnY: 1
-      enemyCount: 9
-      spawnDelay: 3
-      spawnSimultaneously: 1
-    - enemyType:
-        prefab: {fileID: 4997267856341783140, guid: f940166c4cd74aa4eb869ce537be0729,
-          type: 3}
-        moveSpeed: 3
-        damage: 10
-        explosionEffect: {fileID: 656927687}
-        spawnY: 0
-      enemyCount: 9
-      spawnDelay: 4
-      spawnSimultaneously: 1
-    - enemyType:
-        prefab: {fileID: 6632001730068188571, guid: aca9a532dec8d0248a308056220a0f0e,
-          type: 3}
         moveSpeed: 3
         damage: 10
         explosionEffect: {fileID: 656927687}
         spawnY: 1
-      enemyCount: 9
-      spawnDelay: 2
-      spawnSimultaneously: 1
-    - enemyType:
-        prefab: {fileID: 4997267856341783140, guid: f940166c4cd74aa4eb869ce537be0729,
-          type: 3}
-        moveSpeed: 3
-        damage: 10
-        explosionEffect: {fileID: 656927687}
-        spawnY: 0
-      enemyCount: 9
-      spawnDelay: 4
-      spawnSimultaneously: 0
-    - enemyType:
-        prefab: {fileID: 6632001730068188571, guid: aca9a532dec8d0248a308056220a0f0e,
-          type: 3}
-        moveSpeed: 3
-        damage: 10
-        explosionEffect: {fileID: 656927687}
-        spawnY: 1
-      enemyCount: 9
-      spawnDelay: 4
+      enemyCount: 5
+      spawnDelay: 10
       spawnSimultaneously: 0
     - enemyType:
         prefab: {fileID: 4997267856341783140, guid: f940166c4cd74aa4eb869ce537be0729,
@@ -455,126 +255,26 @@ MonoBehaviour:
         damage: 10
         explosionEffect: {fileID: 656927687}
         spawnY: 0
-      enemyCount: 3
-      spawnDelay: 4
-      spawnSimultaneously: 1
-    - enemyType:
-        prefab: {fileID: 6632001730068188571, guid: aca9a532dec8d0248a308056220a0f0e,
-          type: 3}
-        moveSpeed: 3
-        damage: 10
-        explosionEffect: {fileID: 656927687}
-        spawnY: 1
-      enemyCount: 3
-      spawnDelay: 4
-      spawnSimultaneously: 1
-    - enemyType:
-        prefab: {fileID: 4997267856341783140, guid: f940166c4cd74aa4eb869ce537be0729,
-          type: 3}
-        moveSpeed: 3
-        damage: 10
-        explosionEffect: {fileID: 656927687}
-        spawnY: 0
-      enemyCount: 9
-      spawnDelay: 4
+      enemyCount: 5
+      spawnDelay: 10
       spawnSimultaneously: 0
-    - enemyType:
-        prefab: {fileID: 6632001730068188571, guid: aca9a532dec8d0248a308056220a0f0e,
-          type: 3}
-        moveSpeed: 3
-        damage: 10
-        explosionEffect: {fileID: 656927687}
-        spawnY: 1
-      enemyCount: 3
-      spawnDelay: 4
-      spawnSimultaneously: 1
-    - enemyType:
-        prefab: {fileID: 4997267856341783140, guid: f940166c4cd74aa4eb869ce537be0729,
-          type: 3}
-        moveSpeed: 3
-        damage: 10
-        explosionEffect: {fileID: 656927687}
-        spawnY: 0
-      enemyCount: 3
-      spawnDelay: 4
-      spawnSimultaneously: 1
-    - enemyType:
-        prefab: {fileID: 6632001730068188571, guid: aca9a532dec8d0248a308056220a0f0e,
-          type: 3}
-        moveSpeed: 3
-        damage: 10
-        explosionEffect: {fileID: 656927687}
-        spawnY: 1
-      enemyCount: 9
-      spawnDelay: 4
-      spawnSimultaneously: 1
-    - enemyType:
-        prefab: {fileID: 4997267856341783140, guid: f940166c4cd74aa4eb869ce537be0729,
-          type: 3}
-        moveSpeed: 3
-        damage: 10
-        explosionEffect: {fileID: 656927687}
-        spawnY: 0
-      enemyCount: 3
-      spawnDelay: 4
-      spawnSimultaneously: 1
     timeBetweenEnemySpawns: 2
-    timeBeforeNextWave: 8
-    enemySpeedMultiplier: 2
-    enemyHealthMultiplier: 2
-    enemyDamageMultiplier: 2
+    timeBeforeNextWave: 0
+    enemySpeedMultiplier: 1.9
+    enemyHealthMultiplier: 1.9
+    enemyDamageMultiplier: 1.9
   - waveName: Wave 5
     waveNumber: 1
     enemyWaves:
     - enemyType:
         prefab: {fileID: 6632001730068188571, guid: aca9a532dec8d0248a308056220a0f0e,
           type: 3}
-        moveSpeed: 5
-        damage: 15
-        explosionEffect: {fileID: 656927687}
-        spawnY: 1
-      enemyCount: 10
-      spawnDelay: 1
-      spawnSimultaneously: 1
-    - enemyType:
-        prefab: {fileID: 4997267856341783140, guid: f940166c4cd74aa4eb869ce537be0729,
-          type: 3}
-        moveSpeed: 5
-        damage: 15
-        explosionEffect: {fileID: 656927687}
-        spawnY: 0
-      enemyCount: 10
-      spawnDelay: 2
-      spawnSimultaneously: 1
-    - enemyType:
-        prefab: {fileID: 6632001730068188571, guid: aca9a532dec8d0248a308056220a0f0e,
-          type: 3}
-        moveSpeed: 3
-        damage: 15
-        explosionEffect: {fileID: 656927687}
-        spawnY: 1
-      enemyCount: 3
-      spawnDelay: 3
-      spawnSimultaneously: 1
-    - enemyType:
-        prefab: {fileID: 4997267856341783140, guid: f940166c4cd74aa4eb869ce537be0729,
-          type: 3}
-        moveSpeed: 3
-        damage: 10
-        explosionEffect: {fileID: 656927687}
-        spawnY: 0
-      enemyCount: 3
-      spawnDelay: 4
-      spawnSimultaneously: 1
-    - enemyType:
-        prefab: {fileID: 6632001730068188571, guid: aca9a532dec8d0248a308056220a0f0e,
-          type: 3}
         moveSpeed: 3
         damage: 10
         explosionEffect: {fileID: 656927687}
         spawnY: 1
-      enemyCount: 10
-      spawnDelay: 4
+      enemyCount: 6
+      spawnDelay: 10
       spawnSimultaneously: 0
     - enemyType:
         prefab: {fileID: 4997267856341783140, guid: f940166c4cd74aa4eb869ce537be0729,
@@ -583,154 +283,14 @@ MonoBehaviour:
         damage: 10
         explosionEffect: {fileID: 656927687}
         spawnY: 0
-      enemyCount: 10
-      spawnDelay: 4
+      enemyCount: 6
+      spawnDelay: 10
       spawnSimultaneously: 0
-    - enemyType:
-        prefab: {fileID: 6632001730068188571, guid: aca9a532dec8d0248a308056220a0f0e,
-          type: 3}
-        moveSpeed: 3
-        damage: 10
-        explosionEffect: {fileID: 656927687}
-        spawnY: 1
-      enemyCount: 10
-      spawnDelay: 4
-      spawnSimultaneously: 0
-    - enemyType:
-        prefab: {fileID: 4997267856341783140, guid: f940166c4cd74aa4eb869ce537be0729,
-          type: 3}
-        moveSpeed: 3
-        damage: 10
-        explosionEffect: {fileID: 656927687}
-        spawnY: 0
-      enemyCount: 10
-      spawnDelay: 4
-      spawnSimultaneously: 0
-    - enemyType:
-        prefab: {fileID: 6632001730068188571, guid: aca9a532dec8d0248a308056220a0f0e,
-          type: 3}
-        moveSpeed: 3
-        damage: 10
-        explosionEffect: {fileID: 656927687}
-        spawnY: 1
-      enemyCount: 3
-      spawnDelay: 4
-      spawnSimultaneously: 1
-    - enemyType:
-        prefab: {fileID: 4997267856341783140, guid: f940166c4cd74aa4eb869ce537be0729,
-          type: 3}
-        moveSpeed: 3
-        damage: 10
-        explosionEffect: {fileID: 656927687}
-        spawnY: 0
-      enemyCount: 3
-      spawnDelay: 4
-      spawnSimultaneously: 1
-    - enemyType:
-        prefab: {fileID: 6632001730068188571, guid: aca9a532dec8d0248a308056220a0f0e,
-          type: 3}
-        moveSpeed: 3
-        damage: 10
-        explosionEffect: {fileID: 656927687}
-        spawnY: 1
-      enemyCount: 3
-      spawnDelay: 4
-      spawnSimultaneously: 1
-    - enemyType:
-        prefab: {fileID: 4997267856341783140, guid: f940166c4cd74aa4eb869ce537be0729,
-          type: 3}
-        moveSpeed: 3
-        damage: 10
-        explosionEffect: {fileID: 656927687}
-        spawnY: 0
-      enemyCount: 3
-      spawnDelay: 4
-      spawnSimultaneously: 1
-    - enemyType:
-        prefab: {fileID: 6632001730068188571, guid: aca9a532dec8d0248a308056220a0f0e,
-          type: 3}
-        moveSpeed: 3
-        damage: 10
-        explosionEffect: {fileID: 656927687}
-        spawnY: 1
-      enemyCount: 3
-      spawnDelay: 4
-      spawnSimultaneously: 0
-    - enemyType:
-        prefab: {fileID: 4997267856341783140, guid: f940166c4cd74aa4eb869ce537be0729,
-          type: 3}
-        moveSpeed: 3
-        damage: 10
-        explosionEffect: {fileID: 656927687}
-        spawnY: 0
-      enemyCount: 3
-      spawnDelay: 4
-      spawnSimultaneously: 0
-    - enemyType:
-        prefab: {fileID: 6632001730068188571, guid: aca9a532dec8d0248a308056220a0f0e,
-          type: 3}
-        moveSpeed: 3
-        damage: 10
-        explosionEffect: {fileID: 656927687}
-        spawnY: 1
-      enemyCount: 3
-      spawnDelay: 4
-      spawnSimultaneously: 1
-    - enemyType:
-        prefab: {fileID: 4997267856341783140, guid: f940166c4cd74aa4eb869ce537be0729,
-          type: 3}
-        moveSpeed: 3
-        damage: 10
-        explosionEffect: {fileID: 656927687}
-        spawnY: 0
-      enemyCount: 3
-      spawnDelay: 4
-      spawnSimultaneously: 1
-    - enemyType:
-        prefab: {fileID: 6632001730068188571, guid: aca9a532dec8d0248a308056220a0f0e,
-          type: 3}
-        moveSpeed: 3
-        damage: 10
-        explosionEffect: {fileID: 656927687}
-        spawnY: 1
-      enemyCount: 10
-      spawnDelay: 2
-      spawnSimultaneously: 0
-    - enemyType:
-        prefab: {fileID: 4997267856341783140, guid: f940166c4cd74aa4eb869ce537be0729,
-          type: 3}
-        moveSpeed: 3
-        damage: 10
-        explosionEffect: {fileID: 656927687}
-        spawnY: 0
-      enemyCount: 3
-      spawnDelay: 4
-      spawnSimultaneously: 0
-    - enemyType:
-        prefab: {fileID: 6632001730068188571, guid: aca9a532dec8d0248a308056220a0f0e,
-          type: 3}
-        moveSpeed: 3
-        damage: 10
-        explosionEffect: {fileID: 656927687}
-        spawnY: 1
-      enemyCount: 10
-      spawnDelay: 4
-      spawnSimultaneously: 1
-    - enemyType:
-        prefab: {fileID: 4997267856341783140, guid: f940166c4cd74aa4eb869ce537be0729,
-          type: 3}
-        moveSpeed: 3
-        damage: 10
-        explosionEffect: {fileID: 656927687}
-        spawnY: 0
-      enemyCount: 3
-      spawnDelay: 4
-      spawnSimultaneously: 1
     timeBetweenEnemySpawns: 2
-    timeBeforeNextWave: 8
-    enemySpeedMultiplier: 2
-    enemyHealthMultiplier: 2
-    enemyDamageMultiplier: 2
+    timeBeforeNextWave: 0
+    enemySpeedMultiplier: 1
+    enemyHealthMultiplier: 1
+    enemyDamageMultiplier: 1
   autoStartWaves: 1
   timeBetweenWaves: 5
   useTimedWaves: 1
@@ -751,7 +311,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 30
+  m_RootOrder: 28
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &21017209
 GameObject:
@@ -2948,7 +2508,7 @@ Transform:
   m_LocalScale: {x: 18.94361, y: 18.94361, z: 18.94361}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 28
+  m_RootOrder: 29
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &473147630
 GameObject:
@@ -13992,7 +13552,7 @@ Transform:
   m_LocalScale: {x: 18.94361, y: 18.94361, z: 18.94361}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 29
+  m_RootOrder: 30
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1641487609
 GameObject:
@@ -14517,7 +14077,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 364}
+  m_AnchoredPosition: {x: 0, y: 590}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1747763157
