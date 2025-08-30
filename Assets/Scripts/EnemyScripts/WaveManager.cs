@@ -71,7 +71,7 @@ public class WaveManager : MonoBehaviour
         isWaveActive = true;
         currentWaveEnemies.Clear();
         
-        Debug.Log($"Starting {waveConfig.waveName}");
+        Debug.Log($"Starting {waveConfig.waveName} (Wave {CurrentWave})");
         OnWaveStart?.Invoke(CurrentWave);
 
         // Spawn all enemy types defined in this wave
@@ -95,6 +95,11 @@ public class WaveManager : MonoBehaviour
                     if (enemy != null)
                     {
                         currentWaveEnemies.Add(enemy);
+                        Debug.Log($"Spawned enemy {j + 1}/{enemyWave.enemyCount}. Total enemies in wave: {currentWaveEnemies.Count}");
+                    }
+                    else
+                    {
+                        Debug.LogWarning($"Failed to spawn enemy {j + 1} for wave {CurrentWave}");
                     }
                 }
             }
@@ -107,6 +112,11 @@ public class WaveManager : MonoBehaviour
                     if (enemy != null)
                     {
                         currentWaveEnemies.Add(enemy);
+                        Debug.Log($"Spawned enemy {j + 1}/{enemyWave.enemyCount} (Interval). Total enemies in wave: {currentWaveEnemies.Count}");
+                    }
+                    else
+                    {
+                        Debug.LogWarning($"Failed to spawn enemy {j + 1} for wave {CurrentWave} (Interval)");
                     }
                     
                     if (j < enemyWave.enemyCount - 1) // Don't wait after the last enemy
@@ -121,9 +131,8 @@ public class WaveManager : MonoBehaviour
         yield return new WaitUntil(() => AreAllEnemiesDefeated());
         
         isWaveActive = false;
-        OnWaveComplete?.Invoke(CurrentWave);
-        
         Debug.Log($"{waveConfig.waveName} completed!");
+        OnWaveComplete?.Invoke(CurrentWave);
         
         // Move to next wave
         currentWaveIndex++;
@@ -152,7 +161,14 @@ public class WaveManager : MonoBehaviour
     bool AreAllEnemiesDefeated()
     {
         // Remove null references (destroyed enemies)
+        int beforeCount = currentWaveEnemies.Count;
         currentWaveEnemies.RemoveAll(enemy => enemy == null);
+        
+        if (beforeCount != currentWaveEnemies.Count)
+        {
+            Debug.Log($"Cleaned up {beforeCount - currentWaveEnemies.Count} destroyed enemies. Remaining: {currentWaveEnemies.Count}");
+        }
+        
         return currentWaveEnemies.Count == 0;
     }
 
@@ -198,5 +214,52 @@ public class WaveManager : MonoBehaviour
         {
             StartCoroutine(StartFirstWaveDelayed());
         }
+    }
+    
+    [ContextMenu("Auto-Configure Waves with Prefabs")]
+    public void AutoConfigureWaves()
+    {
+        // Find enemy prefabs in the project
+        GameObject[] enemyPrefabs = new GameObject[3];
+        enemyPrefabs[0] = Resources.Load<GameObject>("kamikaze");
+        enemyPrefabs[1] = Resources.Load<GameObject>("rangeBot");
+        enemyPrefabs[2] = Resources.Load<GameObject>("Robot_Soldier");
+        
+        // If Resources.Load doesn't work, you'll need to manually assign these in Inspector
+        // This is just a helper - the real fix is manual assignment
+        
+        if (waves == null || waves.Length == 0)
+        {
+            // Create 5 sample waves
+            waves = new WaveConfig[5];
+            for (int i = 0; i < 5; i++)
+            {
+                waves[i] = new WaveConfig();
+                waves[i].waveName = $"Wave {i + 1}";
+                waves[i].waveNumber = i + 1;
+                waves[i].timeBetweenEnemySpawns = 1.5f;
+                waves[i].timeBeforeNextWave = 5f;
+                
+                // Difficulty scaling
+                waves[i].enemySpeedMultiplier = 1f + (i * 0.1f);
+                waves[i].enemyHealthMultiplier = 1f + (i * 0.2f);
+                waves[i].enemyDamageMultiplier = 1f + (i * 0.1f);
+                
+                // Create enemy wave data - start with one enemy type per wave
+                waves[i].enemyWaves = new EnemyWaveData[1];
+                waves[i].enemyWaves[0] = new EnemyWaveData();
+                waves[i].enemyWaves[0].enemyCount = 3 + i; // 3, 4, 5, 6, 7 enemies per wave
+                
+                // Create EnemyType (you still need to assign prefab manually!)
+                waves[i].enemyWaves[0].enemyType = new EnemyType();
+                waves[i].enemyWaves[0].enemyType.moveSpeed = 3f + i;
+                waves[i].enemyWaves[0].enemyType.damage = 10f + (i * 5f);
+                waves[i].enemyWaves[0].enemyType.spawnY = 0f;
+                // Note: prefab still needs to be assigned manually in inspector!
+            }
+        }
+        
+        Debug.Log("Auto-configured waves created! You still need to manually assign the prefabs in the Inspector.");
+        Debug.Log("Drag kamikaze.prefab, rangeBot.prefab, or Robot_Soldier.prefab to the Enemy Type → Prefab fields");
     }
 }

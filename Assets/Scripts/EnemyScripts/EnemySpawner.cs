@@ -72,7 +72,7 @@ public class EnemySpawner : MonoBehaviour
     {
         if (enemyType?.prefab == null || spawnPoints == null || spawnPoints.Length == 0)
         {
-            Debug.LogWarning("Cannot spawn enemy: missing prefab or spawn points");
+            Debug.LogWarning($"Cannot spawn enemy: enemyType={enemyType}, prefab={enemyType?.prefab}, spawnPoints.Length={spawnPoints?.Length}");
             return null;
         }
 
@@ -83,6 +83,7 @@ public class EnemySpawner : MonoBehaviour
         spawnPos.y = enemyType.spawnY;
 
         GameObject obj = Instantiate(enemyType.prefab, spawnPos, Quaternion.identity);
+        Debug.Log($"Successfully spawned {enemyType.prefab.name} at {spawnPos}");
 
         // Apply wave-based difficulty scaling
         float speedMultiplier = waveConfig?.enemySpeedMultiplier ?? 1f;

@@ -155,13 +155,44 @@ MonoBehaviour:
     waveNumber: 1
     enemyWaves:
     - enemyType:
-        prefab: {fileID: 0}
+        prefab: {fileID: 6632001730068188571, guid: aca9a532dec8d0248a308056220a0f0e,
+          type: 3}
         moveSpeed: 3
         damage: 10
-        explosionEffect: {fileID: 0}
-        spawnY: 0
-      enemyCount: 3
-      spawnDelay: 0
+        explosionEffect: {fileID: 656927687}
+        spawnY: 1
+      enemyCount: 2
+      spawnDelay: 1
+      spawnSimultaneously: 0
+    - enemyType:
+        prefab: {fileID: 4997267856341783140, guid: f940166c4cd74aa4eb869ce537be0729,
+          type: 3}
+        moveSpeed: 3
+        damage: 10
+        explosionEffect: {fileID: 656927687}
+        spawnY: 1
+      enemyCount: 2
+      spawnDelay: 2
+      spawnSimultaneously: 0
+    - enemyType:
+        prefab: {fileID: 6632001730068188571, guid: aca9a532dec8d0248a308056220a0f0e,
+          type: 3}
+        moveSpeed: 3
+        damage: 10
+        explosionEffect: {fileID: 656927687}
+        spawnY: 1
+      enemyCount: 2
+      spawnDelay: 3
+      spawnSimultaneously: 1
+    - enemyType:
+        prefab: {fileID: 4997267856341783140, guid: f940166c4cd74aa4eb869ce537be0729,
+          type: 3}
+        moveSpeed: 3
+        damage: 10
+        explosionEffect: {fileID: 656927687}
+        spawnY: 1
+      enemyCount: 2
+      spawnDelay: 4
       spawnSimultaneously: 0
     timeBetweenEnemySpawns: 2
     timeBeforeNextWave: 8
@@ -169,73 +200,197 @@ MonoBehaviour:
     enemyHealthMultiplier: 1
     enemyDamageMultiplier: 1
   - waveName: Wave 2
-    waveNumber: 2
+    waveNumber: 1
     enemyWaves:
     - enemyType:
-        prefab: {fileID: 0}
+        prefab: {fileID: 6632001730068188571, guid: aca9a532dec8d0248a308056220a0f0e,
+          type: 3}
+        moveSpeed: 5
+        damage: 15
+        explosionEffect: {fileID: 656927687}
+        spawnY: 1
+      enemyCount: 3
+      spawnDelay: 1
+      spawnSimultaneously: 0
+    - enemyType:
+        prefab: {fileID: 4997267856341783140, guid: f940166c4cd74aa4eb869ce537be0729,
+          type: 3}
+        moveSpeed: 5
+        damage: 15
+        explosionEffect: {fileID: 656927687}
+        spawnY: 0
+      enemyCount: 3
+      spawnDelay: 2
+      spawnSimultaneously: 0
+    - enemyType:
+        prefab: {fileID: 6632001730068188571, guid: aca9a532dec8d0248a308056220a0f0e,
+          type: 3}
+        moveSpeed: 3
+        damage: 15
+        explosionEffect: {fileID: 656927687}
+        spawnY: 1
+      enemyCount: 3
+      spawnDelay: 3
+      spawnSimultaneously: 1
+    - enemyType:
+        prefab: {fileID: 4997267856341783140, guid: f940166c4cd74aa4eb869ce537be0729,
+          type: 3}
         moveSpeed: 3
         damage: 10
-        explosionEffect: {fileID: 0}
+        explosionEffect: {fileID: 656927687}
         spawnY: 0
-      enemyCount: 5
-      spawnDelay: 0
+      enemyCount: 3
+      spawnDelay: 4
       spawnSimultaneously: 0
-    timeBetweenEnemySpawns: 1.7
+    timeBetweenEnemySpawns: 2
     timeBeforeNextWave: 8
-    enemySpeedMultiplier: 1.1
-    enemyHealthMultiplier: 1.15
-    enemyDamageMultiplier: 1.05
-  - waveName: Wave 3
-    waveNumber: 3
+    enemySpeedMultiplier: 2
+    enemyHealthMultiplier: 2
+    enemyDamageMultiplier: 2
+  - waveName: Wave 2
+    waveNumber: 1
     enemyWaves:
     - enemyType:
-        prefab: {fileID: 0}
+        prefab: {fileID: 6632001730068188571, guid: aca9a532dec8d0248a308056220a0f0e,
+          type: 3}
+        moveSpeed: 5
+        damage: 15
+        explosionEffect: {fileID: 656927687}
+        spawnY: 1
+      enemyCount: 3
+      spawnDelay: 1
+      spawnSimultaneously: 0
+    - enemyType:
+        prefab: {fileID: 4997267856341783140, guid: f940166c4cd74aa4eb869ce537be0729,
+          type: 3}
+        moveSpeed: 5
+        damage: 15
+        explosionEffect: {fileID: 656927687}
+        spawnY: 0
+      enemyCount: 3
+      spawnDelay: 2
+      spawnSimultaneously: 0
+    - enemyType:
+        prefab: {fileID: 6632001730068188571, guid: aca9a532dec8d0248a308056220a0f0e,
+          type: 3}
+        moveSpeed: 3
+        damage: 15
+        explosionEffect: {fileID: 656927687}
+        spawnY: 1
+      enemyCount: 3
+      spawnDelay: 3
+      spawnSimultaneously: 1
+    - enemyType:
+        prefab: {fileID: 4997267856341783140, guid: f940166c4cd74aa4eb869ce537be0729,
+          type: 3}
         moveSpeed: 3
         damage: 10
-        explosionEffect: {fileID: 0}
+        explosionEffect: {fileID: 656927687}
         spawnY: 0
-      enemyCount: 7
-      spawnDelay: 0
+      enemyCount: 3
+      spawnDelay: 4
       spawnSimultaneously: 0
-    timeBetweenEnemySpawns: 1.4
+    timeBetweenEnemySpawns: 2
     timeBeforeNextWave: 8
-    enemySpeedMultiplier: 1.2
-    enemyHealthMultiplier: 1.3
-    enemyDamageMultiplier: 1.1
-  - waveName: Wave 4
-    waveNumber: 4
+    enemySpeedMultiplier: 2
+    enemyHealthMultiplier: 2
+    enemyDamageMultiplier: 2
+  - waveName: Wave 2
+    waveNumber: 1
     enemyWaves:
     - enemyType:
-        prefab: {fileID: 0}
+        prefab: {fileID: 6632001730068188571, guid: aca9a532dec8d0248a308056220a0f0e,
+          type: 3}
+        moveSpeed: 5
+        damage: 15
+        explosionEffect: {fileID: 656927687}
+        spawnY: 1
+      enemyCount: 3
+      spawnDelay: 1
+      spawnSimultaneously: 0
+    - enemyType:
+        prefab: {fileID: 4997267856341783140, guid: f940166c4cd74aa4eb869ce537be0729,
+          type: 3}
+        moveSpeed: 5
+        damage: 15
+        explosionEffect: {fileID: 656927687}
+        spawnY: 0
+      enemyCount: 3
+      spawnDelay: 2
+      spawnSimultaneously: 0
+    - enemyType:
+        prefab: {fileID: 6632001730068188571, guid: aca9a532dec8d0248a308056220a0f0e,
+          type: 3}
+        moveSpeed: 3
+        damage: 15
+        explosionEffect: {fileID: 656927687}
+        spawnY: 1
+      enemyCount: 3
+      spawnDelay: 3
+      spawnSimultaneously: 1
+    - enemyType:
+        prefab: {fileID: 4997267856341783140, guid: f940166c4cd74aa4eb869ce537be0729,
+          type: 3}
         moveSpeed: 3
         damage: 10
-        explosionEffect: {fileID: 0}
+        explosionEffect: {fileID: 656927687}
         spawnY: 0
-      enemyCount: 9
-      spawnDelay: 0
+      enemyCount: 3
+      spawnDelay: 4
       spawnSimultaneously: 0
-    timeBetweenEnemySpawns: 1.0999999
+    timeBetweenEnemySpawns: 2
     timeBeforeNextWave: 8
-    enemySpeedMultiplier: 1.3
-    enemyHealthMultiplier: 1.45
-    enemyDamageMultiplier: 1.15
-  - waveName: Wave 5
-    waveNumber: 5
+    enemySpeedMultiplier: 2
+    enemyHealthMultiplier: 2
+    enemyDamageMultiplier: 2
+  - waveName: Wave 2
+    waveNumber: 1
     enemyWaves:
     - enemyType:
-        prefab: {fileID: 0}
+        prefab: {fileID: 6632001730068188571, guid: aca9a532dec8d0248a308056220a0f0e,
+          type: 3}
+        moveSpeed: 5
+        damage: 15
+        explosionEffect: {fileID: 656927687}
+        spawnY: 1
+      enemyCount: 3
+      spawnDelay: 1
+      spawnSimultaneously: 0
+    - enemyType:
+        prefab: {fileID: 4997267856341783140, guid: f940166c4cd74aa4eb869ce537be0729,
+          type: 3}
+        moveSpeed: 5
+        damage: 15
+        explosionEffect: {fileID: 656927687}
+        spawnY: 0
+      enemyCount: 3
+      spawnDelay: 2
+      spawnSimultaneously: 0
+    - enemyType:
+        prefab: {fileID: 6632001730068188571, guid: aca9a532dec8d0248a308056220a0f0e,
+          type: 3}
+        moveSpeed: 3
+        damage: 15
+        explosionEffect: {fileID: 656927687}
+        spawnY: 1
+      enemyCount: 3
+      spawnDelay: 3
+      spawnSimultaneously: 1
+    - enemyType:
+        prefab: {fileID: 4997267856341783140, guid: f940166c4cd74aa4eb869ce537be0729,
+          type: 3}
         moveSpeed: 3
         damage: 10
-        explosionEffect: {fileID: 0}
+        explosionEffect: {fileID: 656927687}
         spawnY: 0
-      enemyCount: 11
-      spawnDelay: 0
+      enemyCount: 3
+      spawnDelay: 4
       spawnSimultaneously: 0
-    timeBetweenEnemySpawns: 0.79999995
+    timeBetweenEnemySpawns: 2
     timeBeforeNextWave: 8
-    enemySpeedMultiplier: 1.4
-    enemyHealthMultiplier: 1.6
-    enemyDamageMultiplier: 1.2
+    enemySpeedMultiplier: 2
+    enemyHealthMultiplier: 2
+    enemyDamageMultiplier: 2
   autoStartWaves: 1
   timeBetweenWaves: 5
   enemySpawner: {fileID: 221738134}
@@ -1350,7 +1505,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &205534588
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1457,7 +1612,7 @@ MonoBehaviour:
   spawnInterval: 2
   spawnY: 0
   useWaveSystem: 1
-  waveManager: {fileID: 0}
+  waveManager: {fileID: 4263612}
 --- !u!4 &221738135
 Transform:
   m_ObjectHideFlags: 0
@@ -10793,7 +10948,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 8, y: 125}
+  m_AnchoredPosition: {x: -234, y: 125}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1238593783

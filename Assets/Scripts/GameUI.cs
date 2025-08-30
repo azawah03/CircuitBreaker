@@ -212,7 +212,18 @@ public class GameUI : MonoBehaviour
         // Update wave progress bar
         if (waveProgressSlider != null)
         {
-            float progress = (float)(waveManager.CurrentWave - 1) / waveManager.TotalWaves;
+            float progress = 0f;
+            if (waveManager.TotalWaves > 0)
+            {
+                // Show progress through all waves (0 to 1)
+                progress = (float)(waveManager.CurrentWave - 1) / (float)waveManager.TotalWaves;
+                // If wave is complete, add partial progress for current wave
+                if (waveManager.IsWaveActive && waveManager.EnemiesRemaining > 0)
+                {
+                    // This would show progress within current wave if you want that instead
+                    // progress = (float)waveManager.CurrentWave / (float)waveManager.TotalWaves;
+                }
+            }
             waveProgressSlider.value = progress;
         }
     }
