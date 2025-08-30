@@ -14,6 +14,16 @@ public class GameUI : MonoBehaviour
     public GameObject pauseMenu;
     public GameObject gameOverScreen;
     public GameObject victoryScreen;
+    
+    [Header("Wave System UI")]
+    public TextMeshProUGUI waveText;
+    public TextMeshProUGUI enemiesRemainingText;
+    public TextMeshProUGUI nextWaveCountdownText;
+    public Slider waveProgressSlider;
+    public GameObject waveStartNotification;
+    public GameObject waveCompleteNotification;
+    
+    private WaveManager waveManager;
 
     void Start()
     {
@@ -24,12 +34,24 @@ public class GameUI : MonoBehaviour
             GameManager.Instance.OnLivesChanged += UpdateLives;
         }
 
+        // Find and subscribe to WaveManager events
+        waveManager = FindObjectOfType<WaveManager>();
+        if (waveManager != null)
+        {
+            waveManager.OnWaveStart.AddListener(OnWaveStart);
+            waveManager.OnWaveComplete.AddListener(OnWaveComplete);
+            waveManager.OnAllWavesComplete.AddListener(OnAllWavesComplete);
+        }
+
         // Find player movement for stamina tracking
         GameObject player = GameObject.FindGameObjectWithTag("Player");
         if (player != null)
         {
             playerMovement = player.GetComponent<PlayerMovement>();
         }
+        
+        // Initialize wave UI
+        InitializeWaveUI();
     }
 
     void Update()
@@ -41,6 +63,9 @@ public class GameUI : MonoBehaviour
             UpdateHealthBar();
             UpdateStaminaBar();
         }
+        
+        // Update wave UI
+        UpdateWaveUI();
     }
 
     void UpdateScore(int score)
@@ -140,5 +165,100 @@ public class GameUI : MonoBehaviour
             GameManager.Instance.OnScoreChanged -= UpdateScore;
             GameManager.Instance.OnLivesChanged -= UpdateLives;
         }
+        
+        // Unsubscribe from wave manager events
+        if (waveManager != null)
+        {
+            waveManager.OnWaveStart.RemoveListener(OnWaveStart);
+            waveManager.OnWaveComplete.RemoveListener(OnWaveComplete);
+            waveManager.OnAllWavesComplete.RemoveListener(OnAllWavesComplete);
+        }
     }
+    
+    #region Wave UI Methods
+    
+    void InitializeWaveUI()
+    {
+        // Hide notification panels initially
+        if (waveStartNotification != null)
+            waveStartNotification.SetActive(false);
+        if (waveCompleteNotification != null)
+            waveCompleteNotification.SetActive(false);
+    }
+    
+    void UpdateWaveUI()
+    {
+        if (waveManager == null) return;
+        
+        // Update wave information
+        if (waveText != null)
+        {
+            waveText.text = $"Wave {waveManager.CurrentWave}/{waveManager.TotalWaves}";
+        }
+        
+        // Update enemies remaining
+        if (enemiesRemainingText != null)
+        {
+            if (waveManager.IsWaveActive)
+            {
+                enemiesRemainingText.text = $"Enemies: {waveManager.EnemiesRemaining}";
+            }
+            else
+            {
+                enemiesRemainingText.text = "";
+            }
+        }
+        
+        // Update wave progress bar
+        if (waveProgressSlider != null)
+        {
+            float progress = (float)(waveManager.CurrentWave - 1) / waveManager.TotalWaves;
+            waveProgressSlider.value = progress;
+        }
+    }
+    
+    void OnWaveStart(int waveNumber)
+    {
+        if (waveStartNotification != null)
+        {
+            StartCoroutine(ShowNotification(waveStartNotification, $"Wave {waveNumber} Starting!", 2f));
+        }
+    }
+    
+    void OnWaveComplete(int waveNumber)
+    {
+        if (waveCompleteNotification != null)
+        {
+            StartCoroutine(ShowNotification(waveCompleteNotification, $"Wave {waveNumber} Complete!", 2f));
+        }
+    }
+    
+    void OnAllWavesComplete()
+    {
+        if (waveCompleteNotification != null)
+        {
+            StartCoroutine(ShowNotification(waveCompleteNotification, "All Waves Complete!\nVictory!", 3f));
+        }
+    }
+    
+    System.Collections.IEnumerator ShowNotification(GameObject notification, string message, float duration)
+    {
+        // Find text component and set message
+        TextMeshProUGUI notificationText = notification.GetComponentInChildren<TextMeshProUGUI>();
+        if (notificationText != null)
+        {
+            notificationText.text = message;
+        }
+        
+        // Show notification
+        notification.SetActive(true);
+        
+        // Wait for duration
+        yield return new WaitForSeconds(duration);
+        
+        // Hide notification
+        notification.SetActive(false);
+    }
+    
+    #endregion
 }

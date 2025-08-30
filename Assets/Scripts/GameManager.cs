@@ -263,16 +263,6 @@ public class GameManager : MonoBehaviour
     #region Scene Management
     public void LoadScene(string sceneName)
     {
-        // Reset time scale before loading
-        Time.timeScale = 1f;
-
-        // Reset game data if restarting
-        if (sceneName == gameSceneName || sceneName == SceneManager.GetActiveScene().name)
-        {
-            ResetPlayerData();
-            gameTimer = 0f;  
-        }
-
         StartCoroutine(LoadSceneAsync(sceneName));
     }
 
@@ -372,7 +362,7 @@ public class GameManager : MonoBehaviour
         }
     }
 
-     public void ResetPlayerData()
+    public void ResetPlayerData()
     {
         playerScore = 0;
         playerLives = maxLives;
