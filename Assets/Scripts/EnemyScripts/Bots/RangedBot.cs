@@ -1,23 +1,39 @@
-﻿using System.Diagnostics;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class RangedBot : EnemyAI
 {
     [Header("Ranged Attack Settings")]
     public Transform firePoint;
-    public float attackRange = 15f;        // Ideal distance to maintain
-    public float retreatDistance = 7f;     // If too close, move back
+    public float attackRange = 12f;        // Ideal distance to maintain
+    public float retreatDistance = 4f;     // If too close, move back
     public float fireRate = 2f;
     public float projectileSpeed = 20f;
     public float projectileDamage = 10f;
 
     private float fireTimer;
 
+    protected override void Start()
+    {
+        base.Start();
+        useCustomMovement = true; // RangedBot handles its own movement
+        Debug.Log($"RangedBot Start: useCustomMovement set to {useCustomMovement}");
+    }
+
     protected override void UpdateBehavior()
     {
-        if (target == null) return;
+        if (target == null) 
+        {
+            Debug.LogWarning("RangedBot: No target assigned!");
+            return;
+        }
 
         float distance = Vector3.Distance(transform.position, target.position);
+        
+        // Debug: Log current distance and behavior
+        if (Time.frameCount % 60 == 0) // Log every 60 frames to avoid spam
+        {
+            Debug.Log($"RangedBot - Distance: {distance:F1}, AttackRange: {attackRange}, RetreatDistance: {retreatDistance}");
+        }
 
         // Always look at player
         Vector3 lookDir = (target.position - transform.position).normalized;
@@ -25,20 +41,23 @@ public class RangedBot : EnemyAI
         if (lookDir != Vector3.zero)
             transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(lookDir), Time.deltaTime * 5f);
 
-        // Movement logic: maintain attack range
-        if (distance > attackRange)
+        // Movement logic: FOR TESTING - just move toward player
+        Debug.Log($"RangedBot: Distance to player: {distance:F1}");
+        
+        // TEMPORARY: Always move toward player (ignore retreat logic for now)
+        if (distance > 2f) // Only stop when very close
         {
-            MoveTowards(target.position); // move closer
+            Debug.Log("RangedBot: Moving toward player");
+            MoveTowards(target.position);
         }
-        else if (distance < retreatDistance)
+        else
         {
-            Vector3 retreatDir = (transform.position - target.position).normalized;
-            MoveTowards(transform.position + retreatDir); // move away
+            Debug.Log("RangedBot: Close enough - stopping");
         }
 
         // Fire if within range
         fireTimer += Time.deltaTime;
-        if (distance <= attackRange && fireTimer >= fireRate)
+        if (distance <= attackRange && fireTimer >= (1f / fireRate))
         {
             FireLaser();
             fireTimer = 0f;

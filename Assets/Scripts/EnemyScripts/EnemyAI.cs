@@ -9,6 +9,7 @@ public class EnemyAI : MonoBehaviour
     [Header("Movement")]
     public float moveSpeed = 3f;
     [SerializeField] protected float rotationSpeed = 5f;
+    [SerializeField] protected bool useCustomMovement = false; // Allow subclasses to control their own movement
 
     [Header("Audio")]
     public AudioClip hitSound;
@@ -134,19 +135,29 @@ public class EnemyAI : MonoBehaviour
     {
         if (target == null) return;
 
-        // Move toward target
-        Vector3 direction = (target.position - transform.position);
-        direction.y = 0f;
-
-        if (direction.sqrMagnitude > 0.01f)
+        // Only use default movement if subclass doesn't handle its own
+        if (!useCustomMovement)
         {
-            // Rotate toward target 
-            Quaternion targetRotation = Quaternion.LookRotation(direction);
-            transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, rotationSpeed * Time.deltaTime);
+            Debug.Log("EnemyAI: Using default movement");
+            // Move toward target
+            Vector3 direction = (target.position - transform.position);
+            direction.y = 0f;
 
-            // Move forward
-            Vector3 moveDir = direction.normalized;
-            transform.position += moveDir * moveSpeed * Time.deltaTime;
+            if (direction.sqrMagnitude > 0.01f)
+            {
+                // Rotate toward target 
+                Quaternion targetRotation = Quaternion.LookRotation(direction);
+                transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, rotationSpeed * Time.deltaTime);
+
+                // Move forward
+                Vector3 moveDir = direction.normalized;
+                transform.position += moveDir * moveSpeed * Time.deltaTime;
+            }
+        }
+        else
+        {
+            if (Time.frameCount % 120 == 0) // Log every 2 seconds
+                Debug.Log("EnemyAI: Using custom movement - skipping default movement");
         }
 
         UpdateBehavior(); // Let subclasses override their own logic

@@ -733,6 +733,8 @@ MonoBehaviour:
     enemyDamageMultiplier: 2
   autoStartWaves: 1
   timeBetweenWaves: 5
+  useTimedWaves: 1
+  waveLength: 60
   enemySpawner: {fileID: 221738134}
   OnAllWavesComplete:
     m_PersistentCalls:
@@ -3311,6 +3313,7 @@ MonoBehaviour:
   target: {fileID: 0}
   moveSpeed: 3
   rotationSpeed: 5
+  useCustomMovement: 0
   hitSound: {fileID: 8300000, guid: 8ade91eb95b5fff4cbe2d6b5934845bb, type: 3}
   hitSoundVolume: 0.8
   ambientSound: {fileID: 8300000, guid: 124063affaebf784d880f6e8ad7fb9bc, type: 3}
@@ -13790,6 +13793,7 @@ MonoBehaviour:
   target: {fileID: 0}
   moveSpeed: 3
   rotationSpeed: 5
+  useCustomMovement: 0
   hitSound: {fileID: 8300000, guid: 8ade91eb95b5fff4cbe2d6b5934845bb, type: 3}
   hitSoundVolume: 0.8
   ambientSound: {fileID: 8300000, guid: d699f53998be27a4ca196f597b17831e, type: 3}
@@ -14513,7 +14517,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 241}
+  m_AnchoredPosition: {x: 0, y: 364}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1747763157
