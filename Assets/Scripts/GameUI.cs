@@ -24,6 +24,8 @@ public class GameUI : MonoBehaviour
     public GameObject waveCompleteNotification;
     
     private WaveManager waveManager;
+    private Coroutine currentStartNotificationCoroutine;
+    private Coroutine currentCompleteNotificationCoroutine;
 
     void Start()
     {
@@ -66,6 +68,20 @@ public class GameUI : MonoBehaviour
         
         // Update wave UI
         UpdateWaveUI();
+        
+        // Debug: Press H to manually hide notifications (for testing)
+        if (Input.GetKeyDown(KeyCode.H))
+        {
+            Debug.Log("Manual hide notifications triggered");
+            StopAllNotifications();
+        }
+        
+        // Debug: Press T to test notification (for testing)
+        if (Input.GetKeyDown(KeyCode.T))
+        {
+            Debug.Log("Manual test notification triggered");
+            OnWaveStart(99); // Test notification
+        }
     }
 
     void UpdateScore(int score)
@@ -159,6 +175,25 @@ public class GameUI : MonoBehaviour
 
     void OnDestroy()
     {
+        // Stop any running notification coroutines
+        if (currentStartNotificationCoroutine != null)
+        {
+            StopCoroutine(currentStartNotificationCoroutine);
+            currentStartNotificationCoroutine = null;
+        }
+        
+        if (currentCompleteNotificationCoroutine != null)
+        {
+            StopCoroutine(currentCompleteNotificationCoroutine);
+            currentCompleteNotificationCoroutine = null;
+        }
+        
+        // Hide notifications
+        if (waveStartNotification != null)
+            waveStartNotification.SetActive(false);
+        if (waveCompleteNotification != null)
+            waveCompleteNotification.SetActive(false);
+        
         // Unsubscribe from events
         if (GameManager.Instance != null)
         {
@@ -230,45 +265,133 @@ public class GameUI : MonoBehaviour
     
     void OnWaveStart(int waveNumber)
     {
+        Debug.Log($"OnWaveStart called for wave {waveNumber}");
+        
         if (waveStartNotification != null)
         {
-            StartCoroutine(ShowNotification(waveStartNotification, $"Wave {waveNumber} Starting!", 2f));
+            // Immediately stop and hide any existing notifications
+            StopAllNotifications();
+            
+            // Show the notification
+            ShowWaveNotification(waveStartNotification, $"Wave {waveNumber} Starting!");
+        }
+        else
+        {
+            Debug.LogError("waveStartNotification is null!");
         }
     }
     
     void OnWaveComplete(int waveNumber)
     {
+        Debug.Log($"OnWaveComplete called for wave {waveNumber}");
+        
         if (waveCompleteNotification != null)
         {
-            StartCoroutine(ShowNotification(waveCompleteNotification, $"Wave {waveNumber} Complete!", 2f));
+            // Immediately stop and hide any existing notifications  
+            StopAllNotifications();
+            
+            // Show the notification
+            ShowWaveNotification(waveCompleteNotification, $"Wave {waveNumber} Complete!");
+        }
+        else
+        {
+            Debug.LogError("waveCompleteNotification is null!");
         }
     }
     
     void OnAllWavesComplete()
     {
+        Debug.Log("OnAllWavesComplete called");
+        
         if (waveCompleteNotification != null)
         {
-            StartCoroutine(ShowNotification(waveCompleteNotification, "All Waves Complete!\nVictory!", 3f));
+            // Immediately stop and hide any existing notifications
+            StopAllNotifications();
+            
+            // Show the notification  
+            ShowWaveNotification(waveCompleteNotification, "All Waves Complete!\nVictory!");
         }
     }
     
-    System.Collections.IEnumerator ShowNotification(GameObject notification, string message, float duration)
+    void StopAllNotifications()
     {
-        // Find text component and set message
+        // Stop any running coroutines
+        if (currentStartNotificationCoroutine != null)
+        {
+            StopCoroutine(currentStartNotificationCoroutine);
+            currentStartNotificationCoroutine = null;
+        }
+        
+        if (currentCompleteNotificationCoroutine != null)
+        {
+            StopCoroutine(currentCompleteNotificationCoroutine);
+            currentCompleteNotificationCoroutine = null;
+        }
+        
+        // Immediately hide all notifications
+        if (waveStartNotification != null)
+        {
+            waveStartNotification.SetActive(false);
+            Debug.Log("Forced hide waveStartNotification");
+        }
+        
+        if (waveCompleteNotification != null)
+        {
+            waveCompleteNotification.SetActive(false);
+            Debug.Log("Forced hide waveCompleteNotification");
+        }
+    }
+    
+    void ShowWaveNotification(GameObject notification, string message)
+    {
+        // Set the message
         TextMeshProUGUI notificationText = notification.GetComponentInChildren<TextMeshProUGUI>();
         if (notificationText != null)
         {
             notificationText.text = message;
+            Debug.Log($"Set notification text to: {message}");
+        }
+        else
+        {
+            Debug.LogError($"No TextMeshProUGUI found in {notification.name}");
         }
         
         // Show notification
         notification.SetActive(true);
+        Debug.Log($"Activated notification: {notification.name}");
         
-        // Wait for duration
-        yield return new WaitForSeconds(duration);
+        // Start timer to hide it
+        if (notification == waveStartNotification)
+        {
+            currentStartNotificationCoroutine = StartCoroutine(HideNotificationAfterDelay(notification, 2f, true));
+        }
+        else
+        {
+            currentCompleteNotificationCoroutine = StartCoroutine(HideNotificationAfterDelay(notification, 2f, false));
+        }
+    }
+    
+    System.Collections.IEnumerator HideNotificationAfterDelay(GameObject notification, float delay, bool isStartNotification)
+    {
+        Debug.Log($"Starting timer to hide {notification.name} after {delay} seconds");
         
-        // Hide notification
-        notification.SetActive(false);
+        yield return new WaitForSeconds(delay);
+        
+        if (notification != null)
+        {
+            notification.SetActive(false);
+            Debug.Log($"Timer expired - hiding {notification.name}");
+        }
+        
+        // Clear the coroutine reference
+        if (isStartNotification)
+        {
+            currentStartNotificationCoroutine = null;
+        }
+        else
+        {
+            currentCompleteNotificationCoroutine = null;
+        }
     }
     
     #endregion

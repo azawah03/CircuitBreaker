@@ -10856,7 +10856,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1228306886
 RectTransform:
   m_ObjectHideFlags: 0
@@ -14220,8 +14220,8 @@ MonoBehaviour:
   enemiesRemainingText: {fileID: 1768597538}
   nextWaveCountdownText: {fileID: 0}
   waveProgressSlider: {fileID: 1436463878}
-  waveStartNotification: {fileID: 1864085735}
-  waveCompleteNotification: {fileID: 1238593781}
+  waveStartNotification: {fileID: 1228306885}
+  waveCompleteNotification: {fileID: 205534587}
 --- !u!4 &1749412966
 Transform:
   m_ObjectHideFlags: 0
