@@ -7,9 +7,12 @@ public class MainMenu : MonoBehaviour
 {
     public void PlayGame()
     {
-        // Use GameManager if available, otherwise use direct scene loading
+        Time.timeScale = 1f;
+
         if (GameManager.Instance != null)
         {
+            GameManager.Instance.ResetPlayerData();
+            GameManager.Instance.gameTimer = 0f;
             GameManager.Instance.LoadScene("NeonArena");
         }
         else

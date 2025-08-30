@@ -53,7 +53,15 @@ public class Bullet : MonoBehaviour
     {
         if (other.CompareTag("Enemy"))
         {
-            Debug.Log("Bullet hit enemy");
+            this.enabled = false;
+
+            // Disable the collider so it can't hit anything else.
+            GetComponent<Collider>().enabled = false;
+
+            if (GetComponent<MeshRenderer>() != null)
+            {
+                GetComponent<MeshRenderer>().enabled = false;
+            }
             
             // Play hit sound from bullet's audio source
             if (hitSound != null && audioSource != null)
