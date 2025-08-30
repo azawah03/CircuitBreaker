@@ -121,6 +121,96 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &4263611
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4263613}
+  - component: {fileID: 4263612}
+  m_Layer: 0
+  m_Name: WaveManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &4263612
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4263611}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 26b959f5140bfd0469dca42b59f6c4ce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  waves:
+  - waveName: 
+    waveNumber: 0
+    enemyWaves: []
+    timeBetweenEnemySpawns: 0
+    timeBeforeNextWave: 0
+    enemySpeedMultiplier: 0
+    enemyHealthMultiplier: 0
+    enemyDamageMultiplier: 0
+  - waveName: 
+    waveNumber: 0
+    enemyWaves: []
+    timeBetweenEnemySpawns: 0
+    timeBeforeNextWave: 0
+    enemySpeedMultiplier: 0
+    enemyHealthMultiplier: 0
+    enemyDamageMultiplier: 0
+  - waveName: 
+    waveNumber: 0
+    enemyWaves: []
+    timeBetweenEnemySpawns: 0
+    timeBeforeNextWave: 0
+    enemySpeedMultiplier: 0
+    enemyHealthMultiplier: 0
+    enemyDamageMultiplier: 0
+  - waveName: 
+    waveNumber: 0
+    enemyWaves: []
+    timeBetweenEnemySpawns: 0
+    timeBeforeNextWave: 0
+    enemySpeedMultiplier: 0
+    enemyHealthMultiplier: 0
+    enemyDamageMultiplier: 0
+  - waveName: 
+    waveNumber: 0
+    enemyWaves: []
+    timeBetweenEnemySpawns: 0
+    timeBeforeNextWave: 0
+    enemySpeedMultiplier: 0
+    enemyHealthMultiplier: 0
+    enemyDamageMultiplier: 0
+  autoStartWaves: 1
+  timeBetweenWaves: 5
+  enemySpawner: {fileID: 221738134}
+  OnAllWavesComplete:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!4 &4263613
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4263611}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 136.21448, y: 0.9879999, z: -238.09846}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 30
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &21017209
 GameObject:
   m_ObjectHideFlags: 0
@@ -1210,6 +1300,8 @@ MonoBehaviour:
   player: {fileID: 4729069276702813}
   spawnInterval: 2
   spawnY: 0
+  useWaveSystem: 1
+  waveManager: {fileID: 0}
 --- !u!4 &221738135
 Transform:
   m_ObjectHideFlags: 0

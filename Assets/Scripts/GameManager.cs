@@ -599,4 +599,9 @@ public class GameManager : MonoBehaviour
     {
         SaveGameData();
     }
+    
+    public void TriggerVictory()
+    {
+        ChangeGameState(GameState.Victory);
+    }
 }
