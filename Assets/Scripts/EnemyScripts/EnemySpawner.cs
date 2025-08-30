@@ -136,4 +136,54 @@ public class EnemySpawner : MonoBehaviour
         WaveEnemyTracker tracker = enemy.AddComponent<WaveEnemyTracker>();
         tracker.Initialize(waveManager);
     }
+    
+    [ContextMenu("Create 5 Spawn Points Around Player")]
+    public void CreateSpawnPointsAroundPlayer()
+    {
+        if (player == null)
+        {
+            Debug.LogError("Player reference is missing! Assign player first.");
+            return;
+        }
+        
+        // Create a parent GameObject for spawn points if it doesn't exist
+        GameObject spawnParent = GameObject.Find("SpawnPoints");
+        if (spawnParent == null)
+        {
+            spawnParent = new GameObject("SpawnPoints");
+        }
+        
+        // Clear existing spawn points array
+        spawnPoints = new Transform[5];
+        
+        // Distance from player and Y level
+        float spawnDistance = 15f; // Adjust this based on your arena size
+        float spawnY = player.position.y; // Same Y level as player
+        
+        // Create 5 spawn points in a circle around the player
+        for (int i = 0; i < 5; i++)
+        {
+            // Calculate position in circle
+            float angle = i * 72f; // 360/5 = 72 degrees between points
+            float radian = angle * Mathf.Deg2Rad;
+            
+            Vector3 spawnPos = new Vector3(
+                player.position.x + Mathf.Cos(radian) * spawnDistance,
+                spawnY,
+                player.position.z + Mathf.Sin(radian) * spawnDistance
+            );
+            
+            // Create spawn point GameObject
+            GameObject spawnPoint = new GameObject($"SpawnPoint{i + 1}");
+            spawnPoint.transform.position = spawnPos;
+            spawnPoint.transform.parent = spawnParent.transform;
+            
+            // Add to array
+            spawnPoints[i] = spawnPoint.transform;
+            
+            Debug.Log($"Created {spawnPoint.name} at position {spawnPos}");
+        }
+        
+        Debug.Log("Created 5 spawn points around player!");
+    }
 }
