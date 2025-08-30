@@ -135,6 +135,12 @@ public class GameUI : MonoBehaviour
 
     void UpdateStaminaBar()
     {
+        // Use GameManager's reference
+        if (GameManager.Instance != null && GameManager.Instance.playerMovement != null)
+        {
+            playerMovement = GameManager.Instance.playerMovement;
+        }
+
         if (staminaSlider != null && playerMovement != null)
         {
             staminaSlider.maxValue = playerMovement.maxStamina;
