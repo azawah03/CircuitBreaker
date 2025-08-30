@@ -116,7 +116,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 20
   lifetime: 2
-  fireSound: {fileID: 8300000, guid: f49972648addee24e8693046b5e444b3, type: 3}
+  fireSound: {fileID: 8300000, guid: fc14027ab9a508d45a3e223e071dc3b6, type: 3}
   hitSound: {fileID: 8300000, guid: 51031005fe86fe749bbacae65442f252, type: 3}
 --- !u!65 &3159216751689096251
 BoxCollider:
@@ -143,7 +143,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.453
   m_Pitch: 1
   Loop: 0
   Mute: 0
