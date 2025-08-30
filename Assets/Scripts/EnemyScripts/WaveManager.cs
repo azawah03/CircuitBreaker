@@ -10,6 +10,10 @@ public class WaveManager : MonoBehaviour
     public bool autoStartWaves = true;
     public float timeBetweenWaves = 5f;
     
+    [Header("Timed Waves")]
+    public bool useTimedWaves = true;
+    public float waveLength = 60f; // 1 minute per wave
+    
     [Header("Spawning")]
     public EnemySpawner enemySpawner;
     
@@ -24,12 +28,16 @@ public class WaveManager : MonoBehaviour
     private bool allWavesComplete = false;
     private List<GameObject> currentWaveEnemies = new List<GameObject>();
     private Coroutine currentWaveCoroutine;
+    private float currentWaveTimer = 0f;
+    private float waveStartTime = 0f;
     
     public int CurrentWave => currentWaveIndex + 1;
     public int TotalWaves => waves?.Length ?? 0;
     public bool IsWaveActive => isWaveActive;
     public bool AllWavesComplete => allWavesComplete;
     public int EnemiesRemaining => currentWaveEnemies.Count;
+    public float WaveTimeRemaining => useTimedWaves ? Mathf.Max(0, waveLength - (Time.time - waveStartTime)) : 0f;
+    public float WaveProgress => useTimedWaves ? Mathf.Clamp01((Time.time - waveStartTime) / waveLength) : 0f;
 
     void Start()
     {
@@ -70,10 +78,73 @@ public class WaveManager : MonoBehaviour
     {
         isWaveActive = true;
         currentWaveEnemies.Clear();
+        waveStartTime = Time.time;
         
-        Debug.Log($"Starting {waveConfig.waveName} (Wave {CurrentWave})");
+        Debug.Log($"Starting {waveConfig.waveName} (Wave {CurrentWave}) - Duration: {(useTimedWaves ? waveLength + " seconds" : "until enemies defeated")}");
         OnWaveStart?.Invoke(CurrentWave);
 
+        if (useTimedWaves)
+        {
+            // Timed wave: spawn enemies continuously for the wave duration
+            yield return StartCoroutine(ExecuteTimedWave(waveConfig));
+        }
+        else
+        {
+            // Original behavior: spawn all enemies then wait for completion
+            yield return StartCoroutine(ExecuteEnemyCountWave(waveConfig));
+        }
+
+        isWaveActive = false;
+        Debug.Log($"{waveConfig.waveName} completed!");
+        OnWaveComplete?.Invoke(CurrentWave);
+        
+        // Move to next wave
+        currentWaveIndex++;
+        
+        if (currentWaveIndex < waves.Length)
+        {
+            // Wait before starting next wave
+            yield return new WaitForSeconds(waveConfig.timeBeforeNextWave);
+            StartNextWave();
+        }
+        else
+        {
+            // All waves completed
+            allWavesComplete = true;
+            OnAllWavesComplete?.Invoke();
+            Debug.Log("All waves completed! Victory!");
+            
+            // Trigger victory state if GameManager exists
+            if (GameManager.Instance != null)
+            {
+                GameManager.Instance.TriggerVictory();
+            }
+        }
+    }
+    
+    IEnumerator ExecuteTimedWave(WaveConfig waveConfig)
+    {
+        float waveEndTime = waveStartTime + waveLength;
+        
+        // Start spawning coroutine for continuous enemy spawning
+        StartCoroutine(SpawnEnemiesContinuously(waveConfig, waveEndTime));
+        
+        // Wait for the wave duration
+        while (Time.time < waveEndTime)
+        {
+            yield return null;
+        }
+        
+        Debug.Log($"Wave {CurrentWave} time completed. Cleaning up remaining enemies...");
+        
+        // Optional: Clean up remaining enemies or let them continue to exist
+        // You can choose to destroy them or let the player finish them off
+        ClearRemainingEnemies();
+    }
+    
+    IEnumerator ExecuteEnemyCountWave(WaveConfig waveConfig)
+    {
+        // Original enemy-count-based wave logic
         // Spawn all enemy types defined in this wave
         for (int i = 0; i < waveConfig.enemyWaves.Length; i++)
         {
@@ -129,32 +200,54 @@ public class WaveManager : MonoBehaviour
 
         // Wait for all enemies to be defeated
         yield return new WaitUntil(() => AreAllEnemiesDefeated());
+    }
+    
+    IEnumerator SpawnEnemiesContinuously(WaveConfig waveConfig, float endTime)
+    {
+        Debug.Log($"Starting continuous spawning for Wave {CurrentWave} until {endTime - Time.time} seconds");
         
-        isWaveActive = false;
-        Debug.Log($"{waveConfig.waveName} completed!");
-        OnWaveComplete?.Invoke(CurrentWave);
-        
-        // Move to next wave
-        currentWaveIndex++;
-        
-        if (currentWaveIndex < waves.Length)
+        while (Time.time < endTime)
         {
-            // Wait before starting next wave
-            yield return new WaitForSeconds(waveConfig.timeBeforeNextWave);
-            StartNextWave();
-        }
-        else
-        {
-            // All waves completed
-            allWavesComplete = true;
-            OnAllWavesComplete?.Invoke();
-            Debug.Log("All waves completed! Victory!");
-            
-            // Trigger victory state if GameManager exists
-            if (GameManager.Instance != null)
+            // Spawn enemies from each enemy type in the wave configuration
+            for (int i = 0; i < waveConfig.enemyWaves.Length; i++)
             {
-                GameManager.Instance.TriggerVictory();
+                EnemyWaveData enemyWave = waveConfig.enemyWaves[i];
+                
+                GameObject enemy = enemySpawner.SpawnSpecificEnemy(enemyWave.enemyType, waveConfig);
+                if (enemy != null)
+                {
+                    currentWaveEnemies.Add(enemy);
+                    Debug.Log($"Continuous spawn: Total enemies in wave: {currentWaveEnemies.Count}");
+                }
             }
+            
+            // Wait before spawning next batch
+            float spawnInterval = waveConfig.timeBetweenEnemySpawns;
+            // Make spawning faster in later waves
+            spawnInterval = Mathf.Max(0.5f, spawnInterval - (currentWaveIndex * 0.2f));
+            
+            yield return new WaitForSeconds(spawnInterval);
+        }
+        
+        Debug.Log($"Finished continuous spawning for Wave {CurrentWave}");
+    }
+    
+    void ClearRemainingEnemies()
+    {
+        int enemiesCleared = 0;
+        foreach (GameObject enemy in currentWaveEnemies)
+        {
+            if (enemy != null)
+            {
+                Destroy(enemy);
+                enemiesCleared++;
+            }
+        }
+        currentWaveEnemies.Clear();
+        
+        if (enemiesCleared > 0)
+        {
+            Debug.Log($"Cleared {enemiesCleared} remaining enemies at wave end");
         }
     }
 

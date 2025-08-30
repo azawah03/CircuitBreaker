@@ -234,10 +234,19 @@ public class GameUI : MonoBehaviour
         // Update wave information
         if (waveText != null)
         {
-            waveText.text = $"Wave {waveManager.CurrentWave}/{waveManager.TotalWaves}";
+            if (waveManager.IsWaveActive && waveManager.WaveTimeRemaining > 0)
+            {
+                int minutes = Mathf.FloorToInt(waveManager.WaveTimeRemaining / 60);
+                int seconds = Mathf.FloorToInt(waveManager.WaveTimeRemaining % 60);
+                waveText.text = $"Wave {waveManager.CurrentWave}/{waveManager.TotalWaves} - {minutes:00}:{seconds:00}";
+            }
+            else
+            {
+                waveText.text = $"Wave {waveManager.CurrentWave}/{waveManager.TotalWaves}";
+            }
         }
         
-        // Update enemies remaining
+        // Update enemies remaining (keep this for reference)
         if (enemiesRemainingText != null)
         {
             if (waveManager.IsWaveActive)
@@ -250,22 +259,41 @@ public class GameUI : MonoBehaviour
             }
         }
         
-        // Update wave progress bar
+        // Update wave progress bar - now shows time progress within current wave
         if (waveProgressSlider != null)
         {
             float progress = 0f;
-            if (waveManager.TotalWaves > 0)
+            if (waveManager.IsWaveActive)
             {
-                // Show progress through all waves (0 to 1)
+                // Show progress within the current wave (0 to 1 over 60 seconds)
+                progress = waveManager.WaveProgress;
+            }
+            else
+            {
+                // Show overall progress through all waves
                 progress = (float)(waveManager.CurrentWave - 1) / (float)waveManager.TotalWaves;
-                // If wave is complete, add partial progress for current wave
-                if (waveManager.IsWaveActive && waveManager.EnemiesRemaining > 0)
-                {
-                    // This would show progress within current wave if you want that instead
-                    // progress = (float)waveManager.CurrentWave / (float)waveManager.TotalWaves;
-                }
             }
             waveProgressSlider.value = progress;
+        }
+        
+        // Update next wave countdown text (if you want to show time until next wave)
+        if (nextWaveCountdownText != null)
+        {
+            if (!waveManager.IsWaveActive && !waveManager.AllWavesComplete)
+            {
+                nextWaveCountdownText.text = "Next wave starting...";
+            }
+            else if (waveManager.IsWaveActive)
+            {
+                float timeRemaining = waveManager.WaveTimeRemaining;
+                int minutes = Mathf.FloorToInt(timeRemaining / 60);
+                int seconds = Mathf.FloorToInt(timeRemaining % 60);
+                nextWaveCountdownText.text = $"Wave ends in: {minutes:00}:{seconds:00}";
+            }
+            else
+            {
+                nextWaveCountdownText.text = "";
+            }
         }
     }
     
