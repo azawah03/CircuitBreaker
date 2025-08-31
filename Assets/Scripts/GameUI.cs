@@ -29,12 +29,16 @@ public class GameUI : MonoBehaviour
 
     void Start()
     {
+        Debug.Log("GameUI Start - Beginning");
+
         // Subscribe to GameManager events if available
         if (GameManager.Instance != null)
         {
             GameManager.Instance.OnScoreChanged += UpdateScore;
             GameManager.Instance.OnLivesChanged += UpdateLives;
         }
+
+        Debug.Log("GameUI Start - Finding WaveManager");
 
         // Find and subscribe to WaveManager events
         waveManager = FindObjectOfType<WaveManager>();
@@ -45,15 +49,21 @@ public class GameUI : MonoBehaviour
             waveManager.OnAllWavesComplete.AddListener(OnAllWavesComplete);
         }
 
+        Debug.Log("GameUI Start - Finding Player");
+
         // Find player movement for stamina tracking
         GameObject player = GameObject.FindGameObjectWithTag("Player");
         if (player != null)
         {
             playerMovement = player.GetComponent<PlayerMovement>();
         }
-        
+
+        Debug.Log("GameUI Start - Initializing Wave UI");
+
         // Initialize wave UI
         InitializeWaveUI();
+
+        Debug.Log("GameUI Start - Complete");
     }
 
     void Update()
@@ -187,26 +197,26 @@ public class GameUI : MonoBehaviour
             StopCoroutine(currentStartNotificationCoroutine);
             currentStartNotificationCoroutine = null;
         }
-        
+
         if (currentCompleteNotificationCoroutine != null)
         {
             StopCoroutine(currentCompleteNotificationCoroutine);
             currentCompleteNotificationCoroutine = null;
         }
-        
-        // Hide notifications
-        if (waveStartNotification != null)
+
+        // Hide notifications - Add null checks here
+        if (waveStartNotification != null && waveStartNotification.gameObject != null)
             waveStartNotification.SetActive(false);
-        if (waveCompleteNotification != null)
+        if (waveCompleteNotification != null && waveCompleteNotification.gameObject != null)
             waveCompleteNotification.SetActive(false);
-        
+
         // Unsubscribe from events
         if (GameManager.Instance != null)
         {
             GameManager.Instance.OnScoreChanged -= UpdateScore;
             GameManager.Instance.OnLivesChanged -= UpdateLives;
         }
-        
+
         // Unsubscribe from wave manager events
         if (waveManager != null)
         {
@@ -215,9 +225,9 @@ public class GameUI : MonoBehaviour
             waveManager.OnAllWavesComplete.RemoveListener(OnAllWavesComplete);
         }
     }
-    
+
     #region Wave UI Methods
-    
+
     void InitializeWaveUI()
     {
         // Hide notification panels initially

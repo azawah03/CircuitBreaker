@@ -3,6 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
+[System.Serializable]
+public class IntEvent : UnityEvent<int> { }
+
+[System.Serializable]
+public class VoidEvent : UnityEvent { }
+
 public class WaveManager : MonoBehaviour
 {
     [Header("Wave Configuration")]
@@ -18,10 +24,10 @@ public class WaveManager : MonoBehaviour
     public EnemySpawner enemySpawner;
     
     [Header("Events")]
-    public UnityEvent<int> OnWaveStart;
-    public UnityEvent<int> OnWaveComplete;
-    public UnityEvent OnAllWavesComplete;
-    
+    public IntEvent OnWaveStart = new IntEvent();
+    public IntEvent OnWaveComplete = new IntEvent();
+    public VoidEvent OnAllWavesComplete = new VoidEvent();
+
     // Current state
     private int currentWaveIndex = 0;
     private bool isWaveActive = false;
