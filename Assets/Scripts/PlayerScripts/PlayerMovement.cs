@@ -106,6 +106,19 @@ public class PlayerMovement : MonoBehaviour
             transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, Time.deltaTime * rotationSpeed);
             lastMoveDirection = moveDir;
         }
+        else
+        {
+            // When idle, rotate to face camera direction for aiming/shooting
+            Vector3 cameraForward = cameraTransform.forward;
+            cameraForward.y = 0f; // Keep only horizontal rotation
+            cameraForward.Normalize();
+            
+            if (cameraForward.sqrMagnitude > 0.01f)
+            {
+                Quaternion targetRotation = Quaternion.LookRotation(cameraForward);
+                transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, Time.deltaTime * rotationSpeed);
+            }
+        }
 
         controller.Move(velocity * Time.deltaTime);
     }
