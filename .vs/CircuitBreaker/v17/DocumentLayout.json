@@ -3,6 +3,14 @@
   "WorkspaceRootPath": "C:\\Users\\LordBob\\OneDrive\\Documents\\GitHub\\CircuitBreaker\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\LordBob\\OneDrive\\Documents\\GitHub\\CircuitBreaker\\Assets\\Scripts\\PlayerScripts\\PlayerShooting.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\PlayerScripts\\PlayerShooting.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\LordBob\\OneDrive\\Documents\\GitHub\\CircuitBreaker\\Assets\\Scripts\\PlayerScripts\\PlayerMovement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\PlayerScripts\\PlayerMovement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\LordBob\\OneDrive\\Documents\\GitHub\\CircuitBreaker\\Assets\\Scripts\\GameUI.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\GameUI.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -23,10 +31,6 @@
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\MainMenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\LordBob\\OneDrive\\Documents\\GitHub\\CircuitBreaker\\Assets\\Scripts\\PlayerScripts\\PlayerShooting.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\PlayerScripts\\PlayerShooting.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\LordBob\\OneDrive\\Documents\\GitHub\\CircuitBreaker\\Assets\\Scripts\\EnemyScripts\\Bots\\RangedBot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\EnemyScripts\\Bots\\RangedBot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -42,11 +46,24 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
+              "Title": "PlayerMovement.cs",
+              "DocumentMoniker": "C:\\Users\\LordBob\\OneDrive\\Documents\\GitHub\\CircuitBreaker\\Assets\\Scripts\\PlayerScripts\\PlayerMovement.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\PlayerScripts\\PlayerMovement.cs",
+              "ToolTip": "C:\\Users\\LordBob\\OneDrive\\Documents\\GitHub\\CircuitBreaker\\Assets\\Scripts\\PlayerScripts\\PlayerMovement.cs",
+              "RelativeToolTip": "Assets\\Scripts\\PlayerScripts\\PlayerMovement.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-31T16:03:50.197Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "GameUI.cs",
               "DocumentMoniker": "C:\\Users\\LordBob\\OneDrive\\Documents\\GitHub\\CircuitBreaker\\Assets\\Scripts\\GameUI.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\GameUI.cs",
@@ -54,12 +71,11 @@
               "RelativeToolTip": "Assets\\Scripts\\GameUI.cs",
               "ViewState": "AgIAAJ8BAAAAAAAAAAAawLkBAAAOAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-31T15:11:49.767Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-31T15:11:49.767Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "WaveManager.cs",
               "DocumentMoniker": "C:\\Users\\LordBob\\OneDrive\\Documents\\GitHub\\CircuitBreaker\\Assets\\Scripts\\EnemyScripts\\WaveManager.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\EnemyScripts\\WaveManager.cs",
@@ -71,7 +87,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 6,
               "Title": "MainMenu.cs",
               "DocumentMoniker": "C:\\Users\\LordBob\\OneDrive\\Documents\\GitHub\\CircuitBreaker\\Assets\\Scripts\\MainMenu.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\MainMenu.cs",
@@ -83,7 +99,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "RangedBot.cs",
               "DocumentMoniker": "C:\\Users\\LordBob\\OneDrive\\Documents\\GitHub\\CircuitBreaker\\Assets\\Scripts\\EnemyScripts\\Bots\\RangedBot.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\EnemyScripts\\Bots\\RangedBot.cs",
@@ -95,19 +111,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 0,
               "Title": "PlayerShooting.cs",
               "DocumentMoniker": "C:\\Users\\LordBob\\OneDrive\\Documents\\GitHub\\CircuitBreaker\\Assets\\Scripts\\PlayerScripts\\PlayerShooting.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\PlayerScripts\\PlayerShooting.cs",
               "ToolTip": "C:\\Users\\LordBob\\OneDrive\\Documents\\GitHub\\CircuitBreaker\\Assets\\Scripts\\PlayerScripts\\PlayerShooting.cs",
               "RelativeToolTip": "Assets\\Scripts\\PlayerScripts\\PlayerShooting.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAACkAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-29T18:48:34.327Z"
+              "WhenOpened": "2025-08-29T18:48:34.327Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
               "Title": "GameManager.cs",
               "DocumentMoniker": "C:\\Users\\LordBob\\OneDrive\\Documents\\GitHub\\CircuitBreaker\\Assets\\Scripts\\GameManager.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\GameManager.cs",
@@ -119,7 +136,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "GameSceneInitializer.cs",
               "DocumentMoniker": "C:\\Users\\LordBob\\OneDrive\\Documents\\GitHub\\CircuitBreaker\\Assets\\Scripts\\GameSceneInitializer.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\GameSceneInitializer.cs",
@@ -127,12 +144,11 @@
               "RelativeToolTip": "Assets\\Scripts\\GameSceneInitializer.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-29T18:23:44.869Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-29T18:23:44.869Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 8,
               "Title": "VictoryButton.cs",
               "DocumentMoniker": "C:\\Users\\LordBob\\OneDrive\\Documents\\GitHub\\CircuitBreaker\\Assets\\Scripts\\VictoryButton.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\VictoryButton.cs",
