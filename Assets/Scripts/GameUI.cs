@@ -122,6 +122,7 @@ public class GameUI : MonoBehaviour
                 // You survived 5 minutes
                 if (GameManager.Instance.currentState == GameState.Playing)
                 {
+                    StopAllNotifications();
                     victoryScreen.SetActive(true);
                     UnlockCursor();
                     GameManager.Instance.Victory();
@@ -419,7 +420,7 @@ public class GameUI : MonoBehaviour
     {
         Debug.Log($"Starting timer to hide {notification.name} after {delay} seconds");
         
-        yield return new WaitForSeconds(delay);
+        yield return new WaitForSecondsRealtime(delay);
         
         if (notification != null)
         {
